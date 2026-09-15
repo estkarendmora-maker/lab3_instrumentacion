@@ -34,6 +34,21 @@ El código utilizado para la adquisición fue configurado para enviar únicament
 uint32_t ir = particleSensor.getFIFOIR();
 Serial.println(ir);
 De esta manera, el ESP32 funcionó como sistema de adquisición, mientras que MATLAB recibió los valores de la señal IR para realizar posteriormente el filtrado, detección de pulsos y cálculo de las variables fisiológicas.
+### Adquisición y procesamiento de la señal
+
+La señal IR obtenida mediante el MAX30102 fue enviada desde el ESP32 hacia MATLAB mediante comunicación serial a una velocidad de 115200 baudios. El programa de MATLAB recibió las muestras y las procesó en tiempo real.
+
+La frecuencia de muestreo utilizada fue:
+Fs​=100 Hz
+por lo que el intervalo temporal entre muestras corresponde a:
+
+$$ T_s=\frac{1}{F_s}=\frac{1}{100}=0.01\ s $$
+
+El tiempo de adquisición total utilizado en el código fue de:
+
+150 s=2 min 30 s
+
+
 ## 12. Resultados de la práctica
 
 ### Metodología de captura
