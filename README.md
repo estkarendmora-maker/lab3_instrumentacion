@@ -1,6 +1,37 @@
 # lab3_instrumentacion
-hola
 
+## 11. Procedimiento
+
+### Montaje y prueba inicial del circuito
+
+<img width="1200" height="1600" alt="image" src="https://github.com/user-attachments/assets/6fe5357d-e4ff-4b9c-a9c5-8e047826f56b" />
+Inicialmente se realizó el montaje del circuito destinado a la adquisición de la señal relacionada con la respuesta fisiológica ante el estímulo frío. En una primera etapa se utilizó el sensor TCRT1000, buscando obtener una señal óptica que permitiera posteriormente realizar el procesamiento de la señal y la estimación de las variables fisiológicas.
+
+Sin embargo, durante las pruebas iniciales el montaje con el sensor TCRT1000 no permitió obtener una señal suficientemente estable y adecuada para realizar el procesamiento requerido. Debido a esta limitación experimental, se decidió utilizar el sensor MAX30102, el cual permite realizar la adquisición de señales ópticas asociadas a la fotopletismografía (PPG). Esta modificación permitió obtener una señal adecuada para continuar con el procesamiento en MATLAB y realizar la estimación de la frecuencia cardiaca, el intervalo entre latidos, la amplitud de la onda pletismográfica y el índice SPI.
+
+Por lo tanto, el circuito inicialmente planteado con el TCRT1000 corresponde a una primera prueba experimental, mientras que el circuito con el MAX30102 corresponde al montaje final utilizado para la adquisición de los datos analizados en la práctica.
+
+### Circuito final utilizando el sensor MAX30102
+Para la adquisición final de la señal se utilizó un ESP32 conectado a un sensor óptico MAX30102. La comunicación entre ambos dispositivos se realizó mediante el protocolo I²C.
+<img width="1200" height="1600" alt="image" src="https://github.com/user-attachments/assets/4c4514e5-6e13-4057-b52d-4770d70672e8" />
+De acuerdo con el código implementado, se utilizaron los siguientes pines del ESP32:
+| Elemento                      | ESP32          |
+| ----------------------------- | -------------- |
+| SDA del MAX30102              | GPIO 21        |
+| SCL del MAX30102              | GPIO 22        |
+| Comunicación                  | I²C            |
+| Velocidad serial hacia MATLAB | 115200 baudios |
+| Frecuencia de muestreo        | 100 Hz         |
+La comunicación I²C se inicializó mediante:
+
+Wire.begin(SDA_PIN, SCL_PIN);
+Posteriormente, se verificó la comunicación con el sensor mediante:
+particleSensor.begin(Wire, I2C_SPEED_FAST)
+Una vez inicializado el MAX30102, se configuraron los parámetros de adquisición. El sensor se estableció con una frecuencia de muestreo de 100 Hz, un ancho de pulso de 411 μs, un rango ADC de 4096 y un nivel de brillo LED de 25. El modo utilizado corresponde a la adquisición mediante los canales rojo e infrarrojo (RED + IR), aunque para el procesamiento realizado en MATLAB únicamente se envió la señal infrarroja (IR).
+El código utilizado para la adquisición fue configurado para enviar únicamente el valor IR mediante el puerto serial:
+uint32_t ir = particleSensor.getFIFOIR();
+Serial.println(ir);
+De esta manera, el ESP32 funcionó como sistema de adquisición, mientras que MATLAB recibió los valores de la señal IR para realizar posteriormente el filtrado, detección de pulsos y cálculo de las variables fisiológicas.
 ## 12. Resultados de la práctica
 
 ### Metodología de captura
