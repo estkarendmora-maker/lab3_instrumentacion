@@ -45,7 +45,7 @@ La correlación entre los bajos valores de PPGA y altos valores de SPI durante e
 
 **Validación visual:** Las Imágenes 3 y 5 muestran los máximos y mínimos. Se observa que la detección se mantiene con un pico y un valle por cada latido incluso donde la amplitud de la señal cae en ele timepo 70-110 s, el cual es el tiempo donde se genera el estimulo.
 
-## 12. Análisis de Resultados
+## 13. Análisis de Resultados
 
 ### Análisis 1: Compare los valores del SPI obtenidos durante la práctica con los que frecuentemente se observan durante una cirugía para proporcionar el nivel óptimo de anestesia.  
 Para analizar la respuesta obtenida se dividió el registro en tres periodos: una etapa previa al estímulo entre 30 y 70 s, la aplicación del Cold Pressor Test (CPT) entre 70 y 110 s y una etapa de recuperación entre 110 y 150 s. El SPI promedio pasó de aproximadamente 32,2 antes del CPT a 96,7 durante la aplicación del frío y posteriormente disminuyó hasta aproximadamente 51,8 durante la recuperación.  
@@ -73,7 +73,18 @@ Además, el SPI puede modificarse por factores como la edad, el volumen circulan
 
 Por estas razones, el sistema desarrollado puede considerarse una herramienta útil para detectar y estudiar cambios fisiológicos relacionados con la nocicepción, pero no como un instrumento independiente para medir de forma objetiva la intensidad del dolor subjetivo de una persona [3], [4].  
 
-### 15. PREGUNTAS PARA LA DISCUSIÓN
+## Conclusión
+El desarrollo del sistema permitió abordar el problema de estimar cambios relacionados con la nocicepción a partir de una señal fotopletismográfica obtenida de forma no invasiva. Mediante el procesamiento de la PPG fue posible extraer variables como la amplitud pletismográfica, el intervalo entre latidos y la frecuencia cardiaca, las cuales fueron empleadas para calcular un SPI experimental en tiempo real [1], [2].
+
+Los resultados obtenidos mostraron que el sistema fue capaz de identificar una respuesta fisiológica clara durante la aplicación del Cold Pressor Test. El SPI aumentó de un promedio aproximado de 32,2 antes del estímulo a 96,7 durante su aplicación, acompañado por un aumento de la frecuencia cardiaca, una disminución del intervalo entre latidos y una reducción marcada de la amplitud pletismográfica. Este comportamiento es consistente con una mayor activación simpática y una respuesta nociceptiva frente al estímulo frío [2], [3], [7].
+
+A partir de estos resultados también se evidenció que nocicepción y dolor no son equivalentes. La nocicepción corresponde al procesamiento fisiológico de estímulos potencialmente dañinos, mientras que el dolor constituye una experiencia subjetiva que involucra componentes sensoriales, emocionales y cognitivos [4]. Por esta razón, aunque el SPI permite detectar modificaciones autonómicas asociadas con un estímulo nociceptivo, no debe interpretarse como una medida directa de la intensidad del dolor percibido por una persona [3], [4].
+
+El uso de este tipo de índices puede complementar la evaluación del balance entre nocicepción y analgesia, especialmente en situaciones en las que el paciente no puede comunicar de forma directa su percepción. Sin embargo, su interpretación debe realizarse junto con otras variables fisiológicas y con el contexto clínico, debido a la influencia de factores como movimiento, perfusión periférica, medicamentos y variabilidad individual [3].
+
+Como siguiente paso, sería conveniente validar el sistema en un mayor número de participantes y comparar los valores obtenidos con un equipo clínico o un monitor comercial de SPI. También podría evaluarse la respuesta frente a diferentes intensidades de estímulo y analizar la repetibilidad de las mediciones, con el fin de determinar qué tan cercana es la estimación experimental al comportamiento de un sistema clínicamente validado.
+
+## Discusión
 Pregunta 1. ¿Cómo se relacionan las variaciones del volumen sanguíneo periférico con el balance autonómico?  
 
 Las variaciones de la señal pletismográfica periférica están relacionadas con modificaciones en el tono vascular producidas por el sistema nervioso autónomo. Un aumento de la actividad simpática puede generar vasoconstricción periférica y reducir la amplitud pulsátil registrada mediante fotopletismografía [1], [3]. La PPGA se calcula a partir de la diferencia entre un máximo y el valle correspondiente de la señal PPG, por lo que su disminución permite identificar cambios asociados con vasoconstricción periférica [1].  
@@ -93,4 +104,22 @@ El índice de perfusión (PI) se obtiene a partir de la señal del oxímetro de 
 En consecuencia, los tres índices estudian componentes fisiológicos diferentes: el SPI combina información cardiaca y vascular periférica, el ANI se basa principalmente en la variabilidad cardiaca asociada con la regulación parasimpática y el índice de perfusión refleja principalmente las modificaciones de la perfusión periférica [2], [5], [6]. Ninguno de estos parámetros debe interpretarse por sí solo como una medición directa del dolor subjetivo, ya que el dolor y la nocicepción corresponden a fenómenos distintos [4].  
 
 ## Bibliografia
-[1] E. J. Argüello-Prada, "The mountaineer's method for peak detection in photoplethysmographic signals," Revista Facultad de Ingeniería, Universidad de Antioquia, no. 90, pp. 42–50, 2019. https://doi.org/10.17533/udea.redin.n90a06
+[1] E. J. Argüello-Prada, "The mountaineer's method for peak detection in photoplethysmographic signals," Revista Facultad de Ingeniería, Universidad de Antioquia, no. 90, pp. 42–50, 2019. https://doi.org/10.17533/udea.redin.n90a06  
+
+[2] Huiku, M., Uutela, K., van Gils, M., Korhonen, I., Kymäläinen, M., Meriläinen, P., Paloheimo, M., Rantanen, M., Takala, P., Viertiö-Oja, H., & Yli-Hankala, A. (2007). Assessment of surgical stress during general anaesthesia. British Journal of Anaesthesia, 98(4), 447–455.
+https://doi.org/10.1093/bja/aem004  
+
+[3] Oh, S. K., Won, Y. J., & Lim, B. G. (2024). Surgical pleth index monitoring in perioperative pain management: Usefulness and limitations. Korean Journal of Anesthesiology, 77(1), 31–45.
+https://doi.org/10.4097/kja.23158  
+
+[4] Raja, S. N., Carr, D. B., Cohen, M., Finnerup, N. B., Flor, H., Gibson, S., Keefe, F. J., Mogil, J. S., Ringkamp, M., Sluka, K. A., Song, X. J., Stevens, B., Sullivan, M. D., Tutelman, P. R., Ushida, T., & Vader, K. (2020). The revised International Association for the Study of Pain definition of pain: Concepts, challenges, and compromises. Pain, 161(9), 1976–1982.
+https://doi.org/10.1097/j.pain.0000000000001939  
+
+[5] Jeanne, M., Clément, C., De Jonckheere, J., Logier, R., & Tavernier, B. (2012). Variations of the analgesia nociception index during general anaesthesia for laparoscopic abdominal surgery. Journal of Clinical Monitoring and Computing, 26(4), 289–294.
+https://doi.org/10.1007/s10877-012-9354-0  
+
+[6] Lima, A. P., Beelen, P., & Bakker, J. (2002). Use of a peripheral perfusion index derived from the pulse oximetry signal as a noninvasive indicator of perfusion. Critical Care Medicine, 30(6), 1210–1213.
+https://doi.org/10.1097/00003246-200206000-00006  
+
+[7] Wirch, J. L., Wolfe, L. A., Weissgerber, T. L., & Davies, G. A. L. (2006). Cold pressor test protocol to evaluate cardiac autonomic function. Applied Physiology, Nutrition, and Metabolism, 31(3), 235–243.
+https://doi.org/10.1139/h05-018  
