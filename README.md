@@ -85,7 +85,7 @@ El uso de este tipo de índices puede complementar la evaluación del balance en
 Como siguiente paso, sería conveniente validar el sistema en un mayor número de participantes y comparar los valores obtenidos con un equipo clínico o un monitor comercial de SPI. También podría evaluarse la respuesta frente a diferentes intensidades de estímulo y analizar la repetibilidad de las mediciones, con el fin de determinar qué tan cercana es la estimación experimental al comportamiento de un sistema clínicamente validado.
 
 ## Discusión
-Pregunta 1. ¿Cómo se relacionan las variaciones del volumen sanguíneo periférico con el balance autonómico?  
+**Pregunta 1. ¿Cómo se relacionan las variaciones del volumen sanguíneo periférico con el balance autonómico?**
 
 Las variaciones de la señal pletismográfica periférica están relacionadas con modificaciones en el tono vascular producidas por el sistema nervioso autónomo. Un aumento de la actividad simpática puede generar vasoconstricción periférica y reducir la amplitud pulsátil registrada mediante fotopletismografía [1], [3]. La PPGA se calcula a partir de la diferencia entre un máximo y el valle correspondiente de la señal PPG, por lo que su disminución permite identificar cambios asociados con vasoconstricción periférica [1].  
 
@@ -93,7 +93,7 @@ En el CPT se ha demostrado un aumento de indicadores de actividad simpática y u
 
 Por lo tanto, las variaciones del volumen sanguíneo periférico observadas indirectamente mediante la señal PPG pueden utilizarse como una aproximación a cambios en el tono vascular autonómico, aunque no constituyen por sí solas una medición completa de la actividad del sistema nervioso autónomo [1], [3].  
 
-Pregunta 2. ¿Cómo se compara el SPI con otros índices comúnmente empleados en cirugía, como el índice nocicepción-analgesia (ANI) y el índice de perfusión?  
+**Pregunta 2. ¿Cómo se compara el SPI con otros índices comúnmente empleados en cirugía, como el índice nocicepción-analgesia (ANI) y el índice de perfusión?**
 
 El SPI combina información proveniente del intervalo entre latidos (HBI) y de la amplitud de la señal fotopletismográfica (PPGA). Una disminución del HBI, una disminución de la PPGA o la combinación de ambas producen un aumento del SPI, por lo que valores elevados se asocian con una mayor respuesta nociceptiva [2], [3].  
 
