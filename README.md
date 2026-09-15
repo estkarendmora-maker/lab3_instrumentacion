@@ -27,13 +27,21 @@ De acuerdo con el código implementado, se utilizaron los siguientes pines del E
 La comunicación I²C se inicializó mediante:
 
 Wire.begin(SDA_PIN, SCL_PIN);
+
 Posteriormente, se verificó la comunicación con el sensor mediante:
+
 particleSensor.begin(Wire, I2C_SPEED_FAST)
+
 Una vez inicializado el MAX30102, se configuraron los parámetros de adquisición. El sensor se estableció con una frecuencia de muestreo de 100 Hz, un ancho de pulso de 411 μs, un rango ADC de 4096 y un nivel de brillo LED de 25. El modo utilizado corresponde a la adquisición mediante los canales rojo e infrarrojo (RED + IR), aunque para el procesamiento realizado en MATLAB únicamente se envió la señal infrarroja (IR).
+
 El código utilizado para la adquisición fue configurado para enviar únicamente el valor IR mediante el puerto serial:
+
 uint32_t ir = particleSensor.getFIFOIR();
+
 Serial.println(ir);
+
 De esta manera, el ESP32 funcionó como sistema de adquisición, mientras que MATLAB recibió los valores de la señal IR para realizar posteriormente el filtrado, detección de pulsos y cálculo de las variables fisiológicas.
+
 ### Adquisición y procesamiento de la señal
 
 La señal IR obtenida mediante el MAX30102 fue enviada desde el ESP32 hacia MATLAB mediante comunicación serial a una velocidad de 115200 baudios. El programa de MATLAB recibió las muestras y las procesó en tiempo real.
