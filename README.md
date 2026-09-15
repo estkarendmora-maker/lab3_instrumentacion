@@ -48,8 +48,49 @@ La correlación entre los bajos valores de PPGA y altos valores de SPI durante e
 ## 12. Análisis de Resultados
 
 ### Análisis 1: Compare los valores del SPI obtenidos durante la práctica con los que frecuentemente se observan durante una cirugía para proporcionar el nivel óptimo de anestesia.  
+Para analizar la respuesta obtenida se dividió el registro en tres periodos: una etapa previa al estímulo entre 30 y 70 s, la aplicación del Cold Pressor Test (CPT) entre 70 y 110 s y una etapa de recuperación entre 110 y 150 s. El SPI promedio pasó de aproximadamente 32,2 antes del CPT a 96,7 durante la aplicación del frío y posteriormente disminuyó hasta aproximadamente 51,8 durante la recuperación.  
+
+En pacientes adultos bajo anestesia general se utiliza habitualmente un intervalo de SPI entre 20 y 50 como referencia de un balance adecuado entre nocicepción y analgesia; valores superiores a 50 pueden indicar que el estímulo nociceptivo predomina sobre el efecto analgésico [3]. Por lo tanto, el SPI promedio de 32,2 registrado antes del CPT se encontraba dentro de este intervalo, mientras que el valor de 96,7 observado durante el estímulo frío se situó claramente por encima de dicho rango. El valor promedio de 51,8 durante la recuperación muestra que, aunque la respuesta disminuyó después de retirar el estímulo, todavía no había regresado completamente al nivel previo al CPT [3].  
+
+El incremento del SPI fue acompañado por cambios importantes en las variables utilizadas para obtenerlo. La frecuencia cardiaca promedio aumentó de aproximadamente 55,0 bpm antes del CPT a 75,4 bpm durante el estímulo, mientras que el intervalo entre latidos disminuyó de 1,10 s a 0,81 s. De manera más marcada, la amplitud de la onda pletismográfica (PPGA) disminuyó de aproximadamente 706,6 a 121,0. El SPI se construye a partir de la PPGA normalizada y del intervalo entre latidos normalizado, de manera que una disminución de ambas variables produce un incremento del índice [2].  
+
+Este comportamiento es consistente con la respuesta fisiológica esperada ante un estímulo nociceptivo. El aumento de la actividad simpática incrementa la frecuencia cardiaca y el tono vascular periférico, reduciendo tanto el HBI como la PPGA y produciendo un aumento del SPI [3]. Además, el CPT ha sido utilizado precisamente como una técnica para provocar activación simpática y disminución relativa de la actividad parasimpática [7].  
+
+Durante gran parte del CPT el SPI experimental alcanzó el límite máximo de 100. Este resultado debe interpretarse como una respuesta autonómica muy superior a la observada durante la condición basal y no como una indicación de que el participante experimentó un “dolor de 100”. El SPI fue desarrollado como un indicador del balance nocicepción-antinocicepción y no como una escala subjetiva de intensidad del dolor [2], [3].  
+
+También debe considerarse que el sistema implementado utiliza una normalización experimental basada en la referencia basal obtenida para el participante, mientras que el algoritmo utilizado en monitores comerciales emplea procedimientos propios de normalización. Por esta razón, la comparación con el intervalo clínico de 20–50 permite estudiar el comportamiento y la tendencia del índice, pero los valores obtenidos no deben considerarse equivalentes a los de un dispositivo clínico validado [3].  
 
 ### Análisis 2: Evalúe el alcance y las posibles limitaciones de emplear el sistema desarrollado para cuantificar el dolor que percibe una persona.   
+El sistema desarrollado demostró capacidad para detectar en tiempo real modificaciones fisiológicas asociadas con un estímulo nociceptivo. La disminución de la PPGA, el aumento de la frecuencia cardiaca y la reducción del HBI observados durante el CPT fueron reflejados mediante un incremento marcado del SPI, lo que permite utilizar este tipo de sistema como herramienta experimental para estudiar la respuesta autonómica frente a estímulos potencialmente dolorosos [2], [3].  
+
+Sin embargo, el sistema no permite cuantificar directamente el dolor percibido por una persona. La International Association for the Study of Pain define el dolor como una experiencia sensorial y emocional desagradable asociada, o similar a la asociada, con daño tisular real o potencial; además, establece que el dolor y la nocicepción son fenómenos diferentes y que el dolor es una experiencia personal influida por factores biológicos, psicológicos y sociales [4].  
+
+Por esta razón, dos individuos sometidos al mismo estímulo pueden presentar respuestas autonómicas y experiencias subjetivas diferentes. El SPI proporciona información relacionada principalmente con la respuesta autonómica y con el balance nocicepción-antinocicepción, pero no incorpora directamente factores emocionales, cognitivos o psicológicos que forman parte de la experiencia del dolor [3], [4].
+
+Otra limitación se encuentra en la adquisición de la señal fotopletismográfica. Los movimientos, cambios en el contacto entre el dedo y el sensor, modificaciones de la perfusión periférica y artefactos pueden alterar la forma de la onda PPG y afectar la detección de máximos y mínimos. Aunque el método del alpinista fue diseñado para detectar picos y valles en tiempo real y adaptarse a variaciones de amplitud, sus autores señalan que todavía presenta limitaciones frente a artefactos de movimiento [1].  
+
+Además, el SPI puede modificarse por factores como la edad, el volumen circulante efectivo, la posición corporal, los medicamentos administrados, el tipo de anestesia y el nivel de conciencia del paciente [3]. Esto es especialmente importante en esta práctica, ya que el participante se encontraba consciente durante el CPT, mientras que el SPI fue desarrollado principalmente para evaluar la respuesta nociceptiva de pacientes sometidos a anestesia general [2], [3].  
+
+Por estas razones, el sistema desarrollado puede considerarse una herramienta útil para detectar y estudiar cambios fisiológicos relacionados con la nocicepción, pero no como un instrumento independiente para medir de forma objetiva la intensidad del dolor subjetivo de una persona [3], [4].  
+
+### 15. PREGUNTAS PARA LA DISCUSIÓN
+Pregunta 1. ¿Cómo se relacionan las variaciones del volumen sanguíneo periférico con el balance autonómico?  
+
+Las variaciones de la señal pletismográfica periférica están relacionadas con modificaciones en el tono vascular producidas por el sistema nervioso autónomo. Un aumento de la actividad simpática puede generar vasoconstricción periférica y reducir la amplitud pulsátil registrada mediante fotopletismografía [1], [3]. La PPGA se calcula a partir de la diferencia entre un máximo y el valle correspondiente de la señal PPG, por lo que su disminución permite identificar cambios asociados con vasoconstricción periférica [1].  
+
+En el CPT se ha demostrado un aumento de indicadores de actividad simpática y una reducción relativa de la actividad parasimpática [7]. Esto coincide con los resultados experimentales obtenidos, ya que durante el estímulo frío la PPGA disminuyó de aproximadamente 706,6 a 121,0, mientras que la frecuencia cardiaca aumentó de 55,0 a 75,4 bpm. Estos cambios sugieren un desplazamiento del balance autonómico hacia una mayor actividad simpática durante el estímulo [7].  
+
+Por lo tanto, las variaciones del volumen sanguíneo periférico observadas indirectamente mediante la señal PPG pueden utilizarse como una aproximación a cambios en el tono vascular autonómico, aunque no constituyen por sí solas una medición completa de la actividad del sistema nervioso autónomo [1], [3].  
+
+Pregunta 2. ¿Cómo se compara el SPI con otros índices comúnmente empleados en cirugía, como el índice nocicepción-analgesia (ANI) y el índice de perfusión?  
+
+El SPI combina información proveniente del intervalo entre latidos (HBI) y de la amplitud de la señal fotopletismográfica (PPGA). Una disminución del HBI, una disminución de la PPGA o la combinación de ambas producen un aumento del SPI, por lo que valores elevados se asocian con una mayor respuesta nociceptiva [2], [3].  
+
+El Analgesia Nociception Index (ANI) utiliza principalmente información obtenida de la variabilidad de la frecuencia cardiaca para valorar cambios relacionados con la actividad parasimpática. El índice se ha propuesto para evaluar en tiempo real el balance entre antinocicepción y nocicepción durante anestesia general [5]. A diferencia del SPI, donde valores mayores indican generalmente una respuesta nociceptiva más elevada, en el ANI los valores más bajos se asocian con una menor actividad parasimpática y una mayor respuesta al estrés nociceptivo [5].  
+
+El índice de perfusión (PI) se obtiene a partir de la señal del oxímetro de pulso y representa cambios en la perfusión periférica. Su comportamiento está estrechamente relacionado con modificaciones del flujo sanguíneo periférico y puede utilizarse como indicador no invasivo de cambios en la perfusión [6].  
+
+En consecuencia, los tres índices estudian componentes fisiológicos diferentes: el SPI combina información cardiaca y vascular periférica, el ANI se basa principalmente en la variabilidad cardiaca asociada con la regulación parasimpática y el índice de perfusión refleja principalmente las modificaciones de la perfusión periférica [2], [5], [6]. Ninguno de estos parámetros debe interpretarse por sí solo como una medición directa del dolor subjetivo, ya que el dolor y la nocicepción corresponden a fenómenos distintos [4].  
 
 ## Bibliografia
 [1] E. J. Argüello-Prada, "The mountaineer's method for peak detection in photoplethysmographic signals," Revista Facultad de Ingeniería, Universidad de Antioquia, no. 90, pp. 42–50, 2019. https://doi.org/10.17533/udea.redin.n90a06
