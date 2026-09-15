@@ -45,5 +45,11 @@ La correlación entre los bajos valores de PPGA y altos valores de SPI durante e
 
 **Validación visual:** Las Imágenes 3 y 5 muestran los máximos y mínimos. Se observa que la detección se mantiene con un pico y un valle por cada latido incluso donde la amplitud de la señal cae en ele timepo 70-110 s, el cual es el tiempo donde se genera el estimulo.
 
+## 12. Análisis de Resultados
+
+### Análisis 1: Compare los valores del SPI obtenidos durante la práctica con los que frecuentemente se observan durante una cirugía para proporcionar el nivel óptimo de anestesia.  
+
+### Análisis 2: Evalúe el alcance y las posibles limitaciones de emplear el sistema desarrollado para cuantificar el dolor que percibe una persona.   
+
 ## Bibliografia
 [1] E. J. Argüello-Prada, "The mountaineer's method for peak detection in photoplethysmographic signals," Revista Facultad de Ingeniería, Universidad de Antioquia, no. 90, pp. 42–50, 2019. https://doi.org/10.17533/udea.redin.n90a06
