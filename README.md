@@ -75,7 +75,7 @@ El filtro utilizado fue un filtro Butterworth de tercer orden, con frecuencias d
 
 Por tanto, la señal utilizada para el análisis correspondió a la señal IR filtrada dentro del intervalo:
 
-               $$ 0.7\ Hz \leq f \leq 2.34\ Hz $$
+                0.7\ Hz \leq ≤ f ≤\leq 2.34\ Hz 
 
 Posteriormente, la señal filtrada fue utilizada para identificar los máximos y mínimos correspondientes a los pulsos de la señal PPG.
 
@@ -93,7 +93,7 @@ A partir de la separación temporal entre dos máximos consecutivos se calculó 
 
 y posteriormente la frecuencia cardiaca:
 
-                     FC=\frac{60}{HBI} 
+                     $$FC=\frac{60}{HBI}$$
 
 donde:
 
@@ -107,7 +107,7 @@ Cuando se dispone de una cantidad suficiente de latidos válidos, se establece l
 
 El código implementado utiliza la siguiente expresión para el cálculo del índice:
 
-           \boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right) } 
+          $$ \boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right) } $$
 
 Esta expresión corresponde a la formulación descrita por Huiku et al. (2007) para el índice de estrés quirúrgico, posteriormente denominado Surgical Pleth Index (SPI). El índice combina información proveniente de la amplitud de la onda pletismográfica y del intervalo entre latidos[8].
 
@@ -117,7 +117,8 @@ El SPI (Surgical Pleth Index) es un índice no invasivo derivado principalmente 
 
 Matemáticamente, la formulación utilizada en este trabajo es:
 
-          \boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right) } 
+         
+         $$\boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right) } $$
 
 donde  PPGA_{norm} representa la amplitud normalizada de la onda pletismográfica y HBI_{norm} representa el intervalo entre latidos normalizado.
 
