@@ -22,6 +22,7 @@ De acuerdo con el código implementado, se utilizaron los siguientes pines del E
 | Comunicación                  | I²C            |
 | Velocidad serial hacia MATLAB | 115200 baudios |
 | Frecuencia de muestreo        | 100 Hz         |
+
 La comunicación I²C se inicializó mediante:
 
 Wire.begin(SDA_PIN, SCL_PIN);
