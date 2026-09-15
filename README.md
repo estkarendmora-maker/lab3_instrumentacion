@@ -52,7 +52,7 @@ La frecuencia de muestreo utilizada fue:
 Fs​=100 Hz
 por lo que el intervalo temporal entre muestras corresponde a:
 
- T_s=\frac{1}{F_s}=\frac{1}{100}=0.01\ s 
+$$ T_s=\frac{1}{F_s}=\frac{1}{100}=0.01\ s $$
 
 El tiempo de adquisición total utilizado en el código fue de: 150 s=2 min 30 s
 
