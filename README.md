@@ -121,32 +121,28 @@ donde:
 \(X_{norm}\) corresponde al valor normalizado entre 0 y 100.
 
 Posteriormente, estos valores normalizados se introducen en la ecuación del SPI.
+
 ### ¿Qué es el SPI?
+
 El SPI (Surgical Pleth Index) es un índice no invasivo derivado principalmente de la señal de fotopletismografía (PPG) y de la información relacionada con los intervalos entre latidos. Fue desarrollado inicialmente por Huiku et al. como Surgical Stress Index (SSI) para cuantificar cambios relacionados con el estrés quirúrgico y la respuesta a estímulos nociceptivos durante anestesia general.
 
 Matemáticamente, la formulación utilizada en este trabajo es:
 
 $$ \boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right) } $$
 
-donde:
-
-$$ PPGA_{norm} $$
-
-representa la amplitud normalizada de la onda pletismográfica y
-
-$$ HBI_{norm} $$
-
-representa el intervalo entre latidos normalizado.
+donde $$ PPGA_{norm} $$ representa la amplitud normalizada de la onda pletismográfica y $$ HBI_{norm} $$ representa el intervalo entre latidos normalizado.
 
 El índice es adimensional y se expresa en una escala de 0 a 100. En el contexto de su utilización original, los cambios del índice se relacionan con la respuesta nociceptiva y la respuesta autonómica durante anestesia; por ello, no debe interpretarse directamente como una medición subjetiva del dolor de una persona[8].
 
 En este proyecto, el SPI se utiliza como un indicador experimental de cambios en la respuesta fisiológica ante el estímulo aplicado, obtenido a partir de la señal PPG registrada mediante el MAX30102.
+
 ### Prueba experimental y estímulo frío
 Una vez verificado el funcionamiento del circuito final, se realizó la adquisición de la señal fisiológica durante el protocolo experimental establecido en la práctica.
 
 Durante la prueba se mantuvo el dedo en contacto con el sensor MAX30102, procurando reducir el movimiento para evitar alteraciones en la señal PPG. Posteriormente se aplicó el estímulo frío correspondiente al Cold Pressor Test (CPT), mientras se continuó registrando la señal.
 
 La señal obtenida durante el experimento permitió comparar las variables fisiológicas antes y durante el estímulo, especialmente la frecuencia cardiaca, el HBI, la PPGA y la evolución temporal del SPI.
+
 ## 12. Resultados de la práctica
 
 ### Metodología de captura
