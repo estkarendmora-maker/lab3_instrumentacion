@@ -279,3 +279,5 @@ https://doi.org/10.1097/00003246-200206000-00006
 
 [7] Wirch, J. L., Wolfe, L. A., Weissgerber, T. L., & Davies, G. A. L. (2006). Cold pressor test protocol to evaluate cardiac autonomic function. Applied Physiology, Nutrition, and Metabolism, 31(3), 235–243.
 https://doi.org/10.1139/h05-018  
+
+[8] M. Huiku et al., “Assessment of surgical stress during general anaesthesia,” British Journal of Anaesthesia, vol. 98, no. 4, pp. 447–455, 2007, doi: 10.1093/bja/aem004.
