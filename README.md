@@ -50,7 +50,7 @@ La frecuencia de muestreo utilizada fue:
 Fs​=100 Hz
 por lo que el intervalo temporal entre muestras corresponde a:
 
-$$ T_s=\frac{1}{F_s}=\frac{1}{100}=0.01\ s $$
+ T_s=\frac{1}{F_s}=\frac{1}{100}=0.01\ s 
 
 El tiempo de adquisición total utilizado en el código fue de: 150 s=2 min 30 s
 
@@ -68,11 +68,11 @@ Una vez recibida la señal IR, MATLAB realizó un filtrado pasa banda para conse
 
 El filtro utilizado fue un filtro Butterworth de tercer orden, con frecuencias de corte:
 
-$$ f_{inferior}=0.7\ Hz $$ $$ f_{superior}=2.34\ Hz $$
+ f_{inferior}=0.7\ Hz y f_{superior}=2.34\ Hz 
 
 Por tanto, la señal utilizada para el análisis correspondió a la señal IR filtrada dentro del intervalo:
 
-$$ 0.7\ Hz \leq f \leq 2.34\ Hz $$
+                0.7\ Hz \leq f \leq 2.34\ Hz 
 
 Posteriormente, la señal filtrada fue utilizada para identificar los máximos y mínimos correspondientes a los pulsos de la señal PPG.
 
@@ -83,15 +83,14 @@ El algoritmo analiza la pendiente de la señal para identificar una fase ascende
 
 Además, se identificó el valle asociado a cada pulso. La diferencia entre el máximo y el valle permitió calcular la amplitud de la onda de pulso pletismográfica (PPGA):
 
-$$ PPGA=Pico-Valle $$
+                     PPGA=Pico-Valle 
 
 A partir de la separación temporal entre dos máximos consecutivos se calculó el intervalo entre latidos (HBI):
-
-$$ HBI=t_i-t_{i-1} $$
+                     HBI=t_i-t_{i-1} 
 
 y posteriormente la frecuencia cardiaca:
 
-$$ FC=\frac{60}{HBI} $$
+                     FC=\frac{60}{HBI} 
 
 donde:
 
@@ -105,7 +104,7 @@ Cuando se dispone de una cantidad suficiente de latidos válidos, se establece l
 
 El código implementado utiliza la siguiente expresión para el cálculo del índice:
 
-$$ \boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right) } $$
+           \boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right) } 
 
 Esta expresión corresponde a la formulación descrita por Huiku et al. (2007) para el índice de estrés quirúrgico, posteriormente denominado Surgical Pleth Index (SPI). El índice combina información proveniente de la amplitud de la onda pletismográfica y del intervalo entre latidos[8].
 
@@ -115,9 +114,9 @@ El SPI (Surgical Pleth Index) es un índice no invasivo derivado principalmente 
 
 Matemáticamente, la formulación utilizada en este trabajo es:
 
-$$ \boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right) } $$
+          \boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right) } 
 
-donde $$ PPGA_{norm} $$ representa la amplitud normalizada de la onda pletismográfica y $$ HBI_{norm} $$ representa el intervalo entre latidos normalizado.
+donde  PPGA_{norm} representa la amplitud normalizada de la onda pletismográfica y HBI_{norm} representa el intervalo entre latidos normalizado.
 
 El índice es adimensional y se expresa en una escala de 0 a 100. En el contexto de su utilización original, los cambios del índice se relacionan con la respuesta nociceptiva y la respuesta autonómica durante anestesia; por ello, no debe interpretarse directamente como una medición subjetiva del dolor de una persona[8].
 
