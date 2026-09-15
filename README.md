@@ -7,7 +7,9 @@
 <img width="1200" height="1600" alt="image" src="https://github.com/user-attachments/assets/6fe5357d-e4ff-4b9c-a9c5-8e047826f56b" />
 Inicialmente se realizó el montaje del circuito destinado a la adquisición de la señal relacionada con la respuesta fisiológica ante el estímulo frío. En una primera etapa se utilizó el sensor TCRT1000, buscando obtener una señal óptica que permitiera posteriormente realizar el procesamiento de la señal y la estimación de las variables fisiológicas.
 
+
 Sin embargo, durante las pruebas iniciales el montaje con el sensor TCRT1000 no permitió obtener una señal suficientemente estable y adecuada para realizar el procesamiento requerido. Debido a esta limitación experimental, se decidió utilizar el sensor MAX30102, el cual permite realizar la adquisición de señales ópticas asociadas a la fotopletismografía (PPG). Esta modificación permitió obtener una señal adecuada para continuar con el procesamiento en MATLAB y realizar la estimación de la frecuencia cardiaca, el intervalo entre latidos, la amplitud de la onda pletismográfica y el índice SPI.
+
 
 Por lo tanto, el circuito inicialmente planteado con el TCRT1000 corresponde a una primera prueba experimental, mientras que el circuito con el MAX30102 corresponde al montaje final utilizado para la adquisición de los datos analizados en la práctica.
 
