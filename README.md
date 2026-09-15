@@ -109,7 +109,8 @@ Cuando se dispone de una cantidad suficiente de latidos válidos, se establece l
 
 El código implementado utiliza la siguiente expresión para el cálculo del índice:
 
-          $$ \boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right) } $$
+  <img width="532" height="62" alt="image" src="https://github.com/user-attachments/assets/3f9ab2d9-08f6-4c94-9acd-bd48f9c04d28" />
+
 
 Esta expresión corresponde a la formulación descrita por Huiku et al. (2007) para el índice de estrés quirúrgico, posteriormente denominado Surgical Pleth Index (SPI). El índice combina información proveniente de la amplitud de la onda pletismográfica y del intervalo entre latidos[8].
 
@@ -120,7 +121,7 @@ El SPI (Surgical Pleth Index) es un índice no invasivo derivado principalmente 
 Matemáticamente, la formulación utilizada en este trabajo es:
 
          
-         $$\boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right) } $$
+         $$\boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right)$$
 
 donde  PPGA_{norm} representa la amplitud normalizada de la onda pletismográfica y HBI_{norm} representa el intervalo entre latidos normalizado.
 
