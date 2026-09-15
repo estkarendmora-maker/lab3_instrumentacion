@@ -93,8 +93,7 @@ A partir de la separación temporal entre dos máximos consecutivos se calculó 
 
 y posteriormente la frecuencia cardiaca:
 
-                     $$FC=\frac{60}{HBI}$$
-
+                  FC=60/HBI​
 donde:
 
 \(HBI\) está expresado en segundos.
