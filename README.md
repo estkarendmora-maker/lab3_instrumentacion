@@ -107,20 +107,7 @@ El código implementado utiliza la siguiente expresión para el cálculo del ín
 
 $$ \boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right) } $$
 
-Esta expresión corresponde a la formulación descrita por Huiku et al. (2007) para el índice de estrés quirúrgico, posteriormente denominado Surgical Pleth Index (SPI). El índice combina información proveniente de la amplitud de la onda pletismográfica y del intervalo entre latidos.
-
-En el código, tanto PPGA como HBI son normalizados mediante una función basada en la distribución acumulada de los valores de referencia:
-
-$$ X_{norm} = 100 \frac{\#\{x_{ref}\leq x\}} {N_{ref}} $$
-
-donde:
-
-\(x\) es el valor actual de la variable.
-\(x_{ref}\) representa los valores obtenidos durante la referencia basal.
-\(N_{ref}\) corresponde al número de valores de referencia.
-\(X_{norm}\) corresponde al valor normalizado entre 0 y 100.
-
-Posteriormente, estos valores normalizados se introducen en la ecuación del SPI.
+Esta expresión corresponde a la formulación descrita por Huiku et al. (2007) para el índice de estrés quirúrgico, posteriormente denominado Surgical Pleth Index (SPI). El índice combina información proveniente de la amplitud de la onda pletismográfica y del intervalo entre latidos[8].
 
 ### ¿Qué es el SPI?
 
