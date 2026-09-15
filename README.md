@@ -13,7 +13,8 @@ Por lo tanto, el circuito inicialmente planteado con el TCRT1000 corresponde a u
 
 ### Circuito final utilizando el sensor MAX30102
 Para la adquisición final de la señal se utilizó un ESP32 conectado a un sensor óptico MAX30102. La comunicación entre ambos dispositivos se realizó mediante el protocolo I²C.
-<img width="1200" height="1600" alt="image" src="https://github.com/user-attachments/assets/4c4514e5-6e13-4057-b52d-4770d70672e8" />
+<img width="380" height="535" alt="image" src="https://github.com/user-attachments/assets/2939e751-9bc8-49c3-a4ab-7254bee1db3a" />
+
 De acuerdo con el código implementado, se utilizaron los siguientes pines del ESP32:
 | Elemento                      | ESP32          |
 | ----------------------------- | -------------- |
