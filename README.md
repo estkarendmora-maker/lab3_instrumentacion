@@ -70,11 +70,12 @@ Una vez recibida la señal IR, MATLAB realizó un filtrado pasa banda para conse
 
 El filtro utilizado fue un filtro Butterworth de tercer orden, con frecuencias de corte:
 
- f_{inferior}=0.7\ Hz y f_{superior}=2.34\ Hz 
+
+ $$f_{inferior}=0.7\ Hz y f_{superior}=2.34\ Hz $$
 
 Por tanto, la señal utilizada para el análisis correspondió a la señal IR filtrada dentro del intervalo:
 
-                0.7\ Hz \leq f \leq 2.34\ Hz 
+               $$ 0.7\ Hz \leq f \leq 2.34\ Hz $$
 
 Posteriormente, la señal filtrada fue utilizada para identificar los máximos y mínimos correspondientes a los pulsos de la señal PPG.
 
