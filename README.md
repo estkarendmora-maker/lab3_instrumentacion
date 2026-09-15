@@ -129,6 +129,9 @@ Durante la prueba se mantuvo el dedo en contacto con el sensor MAX30102, procura
 
 La señal obtenida durante el experimento permitió comparar las variables fisiológicas antes y durante el estímulo, especialmente la frecuencia cardiaca, el HBI, la PPGA y la evolución temporal del SPI.
 
+<img width="1200" height="1600" alt="image" src="https://github.com/user-attachments/assets/f7ad0483-fcd0-471c-a6b6-ba00e5187a36" />
+
+
 ## 12. Resultados de la práctica
 
 ### Metodología de captura
