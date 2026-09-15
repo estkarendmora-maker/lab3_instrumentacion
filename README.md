@@ -52,13 +52,14 @@ por lo que el intervalo temporal entre muestras corresponde a:
 
 $$ T_s=\frac{1}{F_s}=\frac{1}{100}=0.01\ s $$
 
-El tiempo de adquisición total utilizado en el código fue de:
+El tiempo de adquisición total utilizado en el código fue de: 150 s=2 min 30 s
 
-150 s=2 min 30 s
 La adquisición se dividió en tres etapas:
 
 0–5 s: estabilización inicial.
+
 5–30 s: referencia o calibración basal.
+
 30–150 s: monitoreo y cálculo del SPI en tiempo real.
 
 Por tanto, después de los primeros 30 segundos se contó con aproximadamente 120 segundos de monitoreo.
