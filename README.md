@@ -120,8 +120,7 @@ El SPI (Surgical Pleth Index) es un índice no invasivo derivado principalmente 
 
 Matemáticamente, la formulación utilizada en este trabajo es:
 
-         
-         $$\boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right)$$
+  <img width="527" height="63" alt="image" src="https://github.com/user-attachments/assets/822a6fd2-4e52-413a-9d74-4dae48ed2882" />
 
 donde  PPGA_{norm} representa la amplitud normalizada de la onda pletismográfica y HBI_{norm} representa el intervalo entre latidos normalizado.
 
