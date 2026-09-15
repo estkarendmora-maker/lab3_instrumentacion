@@ -47,8 +47,97 @@ $$ T_s=\frac{1}{F_s}=\frac{1}{100}=0.01\ s $$
 El tiempo de adquisición total utilizado en el código fue de:
 
 150 s=2 min 30 s
+La adquisición se dividió en tres etapas:
 
+0–5 s: estabilización inicial.
+5–30 s: referencia o calibración basal.
+30–150 s: monitoreo y cálculo del SPI en tiempo real.
 
+Por tanto, después de los primeros 30 segundos se contó con aproximadamente 120 segundos de monitoreo.
+### Filtrado de la señal PPG
+Una vez recibida la señal IR, MATLAB realizó un filtrado pasa banda para conservar principalmente las componentes asociadas con la actividad pulsátil.
+
+El filtro utilizado fue un filtro Butterworth de tercer orden, con frecuencias de corte:
+
+$$ f_{inferior}=0.7\ Hz $$ $$ f_{superior}=2.34\ Hz $$
+
+Por tanto, la señal utilizada para el análisis correspondió a la señal IR filtrada dentro del intervalo:
+
+$$ 0.7\ Hz \leq f \leq 2.34\ Hz $$
+
+Posteriormente, la señal filtrada fue utilizada para identificar los máximos y mínimos correspondientes a los pulsos de la señal PPG.
+
+### Detección de los latidos
+Para identificar los latidos cardíacos se implementó en MATLAB un detector de máximos basado en la evolución de la señal PPG, sin utilizar la función findpeaks.
+
+El algoritmo analiza la pendiente de la señal para identificar una fase ascendente seguida de una fase descendente. Cuando se confirma la cima de la señal, esta se considera un máximo sistólico.
+
+Además, se identificó el valle asociado a cada pulso. La diferencia entre el máximo y el valle permitió calcular la amplitud de la onda de pulso pletismográfica (PPGA):
+
+$$ PPGA=Pico-Valle $$
+
+A partir de la separación temporal entre dos máximos consecutivos se calculó el intervalo entre latidos (HBI):
+
+$$ HBI=t_i-t_{i-1} $$
+
+y posteriormente la frecuencia cardiaca:
+
+$$ FC=\frac{60}{HBI} $$
+
+donde:
+
+\(HBI\) está expresado en segundos.
+\(FC\) corresponde a la frecuencia cardiaca en latidos por minuto.
+### Referencia basal y cálculo del SPI
+
+Durante el intervalo de 5 a 30 segundos se obtuvieron los valores utilizados como referencia basal. El código almacena los valores de PPGA y HBI obtenidos durante este período y posteriormente realiza una limpieza de valores extremos mediante la mediana y la desviación absoluta respecto a la mediana.
+
+Cuando se dispone de una cantidad suficiente de latidos válidos, se establece la referencia basal y se utiliza para normalizar los valores obtenidos durante el período de monitoreo.
+
+El código implementado utiliza la siguiente expresión para el cálculo del índice:
+
+$$ \boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right) } $$
+
+Esta expresión corresponde a la formulación descrita por Huiku et al. (2007) para el índice de estrés quirúrgico, posteriormente denominado Surgical Pleth Index (SPI). El índice combina información proveniente de la amplitud de la onda pletismográfica y del intervalo entre latidos.
+
+En el código, tanto PPGA como HBI son normalizados mediante una función basada en la distribución acumulada de los valores de referencia:
+
+$$ X_{norm} = 100 \frac{\#\{x_{ref}\leq x\}} {N_{ref}} $$
+
+donde:
+
+\(x\) es el valor actual de la variable.
+\(x_{ref}\) representa los valores obtenidos durante la referencia basal.
+\(N_{ref}\) corresponde al número de valores de referencia.
+\(X_{norm}\) corresponde al valor normalizado entre 0 y 100.
+
+Posteriormente, estos valores normalizados se introducen en la ecuación del SPI.
+### ¿Qué es el SPI?
+El SPI (Surgical Pleth Index) es un índice no invasivo derivado principalmente de la señal de fotopletismografía (PPG) y de la información relacionada con los intervalos entre latidos. Fue desarrollado inicialmente por Huiku et al. como Surgical Stress Index (SSI) para cuantificar cambios relacionados con el estrés quirúrgico y la respuesta a estímulos nociceptivos durante anestesia general.
+
+Matemáticamente, la formulación utilizada en este trabajo es:
+
+$$ \boxed{ SPI=100-\left(0.7\,PPGA_{norm}+0.3\,HBI_{norm}\right) } $$
+
+donde:
+
+$$ PPGA_{norm} $$
+
+representa la amplitud normalizada de la onda pletismográfica y
+
+$$ HBI_{norm} $$
+
+representa el intervalo entre latidos normalizado.
+
+El índice es adimensional y se expresa en una escala de 0 a 100. En el contexto de su utilización original, los cambios del índice se relacionan con la respuesta nociceptiva y la respuesta autonómica durante anestesia; por ello, no debe interpretarse directamente como una medición subjetiva del dolor de una persona[8].
+
+En este proyecto, el SPI se utiliza como un indicador experimental de cambios en la respuesta fisiológica ante el estímulo aplicado, obtenido a partir de la señal PPG registrada mediante el MAX30102.
+### Prueba experimental y estímulo frío
+Una vez verificado el funcionamiento del circuito final, se realizó la adquisición de la señal fisiológica durante el protocolo experimental establecido en la práctica.
+
+Durante la prueba se mantuvo el dedo en contacto con el sensor MAX30102, procurando reducir el movimiento para evitar alteraciones en la señal PPG. Posteriormente se aplicó el estímulo frío correspondiente al Cold Pressor Test (CPT), mientras se continuó registrando la señal.
+
+La señal obtenida durante el experimento permitió comparar las variables fisiológicas antes y durante el estímulo, especialmente la frecuencia cardiaca, el HBI, la PPGA y la evolución temporal del SPI.
 ## 12. Resultados de la práctica
 
 ### Metodología de captura
