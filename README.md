@@ -131,12 +131,11 @@ A partir de la separación temporal entre dos máximos consecutivos se calculó 
   <img width="247" height="88" alt="image" src="https://github.com/user-attachments/assets/a29a2942-a906-442d-879f-3cf1214ec0ed"width="500">
 </p>
 
-
-
-
 y posteriormente la frecuencia cardiaca:
 
-  <img width="190" height="83" alt="image" src="https://github.com/user-attachments/assets/9f1cfc39-2692-46a6-8b24-ab10d36b1011" />
+<p align="center">
+  <img width="190" height="83" alt="image" src="https://github.com/user-attachments/assets/9f1cfc39-2692-46a6-8b24-ab10d36b1011"width="500">
+</p>
 
 donde:
 
