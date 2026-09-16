@@ -50,8 +50,9 @@ Por lo tanto, el circuito inicialmente planteado con el TCRT1000 corresponde a u
 ### Circuito final utilizando el sensor MAX30102
 Para la adquisición final de la señal se utilizó un ESP32 conectado a un sensor óptico MAX30102. La comunicación entre ambos dispositivos se realizó mediante el protocolo I²C.
 
-
-<img width="380" height="535" alt="image" src="https://github.com/user-attachments/assets/2939e751-9bc8-49c3-a4ab-7254bee1db3a" />
+<p align="center">
+  <img width="380" height="535" alt="image" src="https://github.com/user-attachments/assets/2939e751-9bc8-49c3-a4ab-7254bee1db3a" width="500">
+</p>
 
 
 De acuerdo con el código implementado, se utilizaron los siguientes pines del ESP32:
@@ -150,10 +151,10 @@ Cuando se dispone de una cantidad suficiente de latidos válidos, se establece l
 El código implementado utiliza la siguiente expresión para el cálculo del índice:
 
 
-
-  <img width="532" height="62" alt="image" src="https://github.com/user-attachments/assets/3f9ab2d9-08f6-4c94-9acd-bd48f9c04d28" />
-
-
+<p align="center">
+  <img width="532" height="62" alt="image" src="https://github.com/user-attachments/assets/3f9ab2d9-08f6-4c94-9acd-bd48f9c04d28"width="500">
+</p>
+  
 Esta expresión corresponde a la formulación descrita por Huiku et al. (2007) para el índice de estrés quirúrgico, posteriormente denominado Surgical Pleth Index (SPI). El índice combina información proveniente de la amplitud de la onda pletismográfica y del intervalo entre latidos[8].
 
 ### ¿Qué es el SPI?
