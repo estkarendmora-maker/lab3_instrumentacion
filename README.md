@@ -149,6 +149,8 @@ Cuando se dispone de una cantidad suficiente de latidos válidos, se establece l
 
 El código implementado utiliza la siguiente expresión para el cálculo del índice:
 
+
+
   <img width="532" height="62" alt="image" src="https://github.com/user-attachments/assets/3f9ab2d9-08f6-4c94-9acd-bd48f9c04d28" />
 
 
@@ -160,7 +162,9 @@ El SPI (Surgical Pleth Index) es un índice no invasivo derivado principalmente 
 
 Matemáticamente, la formulación utilizada en este trabajo es:
 
-  <img width="527" height="63" alt="image" src="https://github.com/user-attachments/assets/822a6fd2-4e52-413a-9d74-4dae48ed2882" />
+<p align="center">
+  <img width="527" height="63" alt="image" src="https://github.com/user-attachments/assets/822a6fd2-4e52-413a-9d74-4dae48ed2882"width="500">
+</p>
 
 donde  PPGA_{norm} representa la amplitud normalizada de la onda pletismográfica y HBI_{norm} representa el intervalo entre latidos normalizado.
 
