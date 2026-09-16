@@ -127,8 +127,11 @@ Además, se identificó el valle asociado a cada pulso. La diferencia entre el m
                      PPGA=Pico-Valle 
 
 A partir de la separación temporal entre dos máximos consecutivos se calculó el intervalo entre latidos (HBI):
+<p align="center">
+  <img width="247" height="88" alt="image" src="https://github.com/user-attachments/assets/a29a2942-a906-442d-879f-3cf1214ec0ed"width="500">
+</p>
 
- <img width="247" height="88" alt="image" src="https://github.com/user-attachments/assets/a29a2942-a906-442d-879f-3cf1214ec0ed" />
+
 
 
 y posteriormente la frecuencia cardiaca:
