@@ -38,6 +38,7 @@ Desarrollar un sistema de adquisición y monitoreo continuo de la señal fotople
 ### Montaje y prueba inicial del circuito
 
 <img width="1200" height="1600" alt="image" src="https://github.com/user-attachments/assets/6fe5357d-e4ff-4b9c-a9c5-8e047826f56b" />
+
 Inicialmente se realizó el montaje del circuito destinado a la adquisición de la señal relacionada con la respuesta fisiológica ante el estímulo frío. En una primera etapa se utilizó el sensor TCRT1000, buscando obtener una señal óptica que permitiera posteriormente realizar el procesamiento de la señal y la estimación de las variables fisiológicas.
 
 
@@ -50,7 +51,9 @@ Por lo tanto, el circuito inicialmente planteado con el TCRT1000 corresponde a u
 Para la adquisición final de la señal se utilizó un ESP32 conectado a un sensor óptico MAX30102. La comunicación entre ambos dispositivos se realizó mediante el protocolo I²C.
 <img width="380" height="535" alt="image" src="https://github.com/user-attachments/assets/2939e751-9bc8-49c3-a4ab-7254bee1db3a" />
 
+
 De acuerdo con el código implementado, se utilizaron los siguientes pines del ESP32:
+
 | Elemento                      | ESP32          |
 | ----------------------------- | -------------- |
 | SDA del MAX30102              | GPIO 21        |
