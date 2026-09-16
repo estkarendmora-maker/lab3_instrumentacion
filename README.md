@@ -1,5 +1,38 @@
 # lab3_instrumentacion
+### Integrantes
+Lina María Cortes Almonacid
 
+Karen Dayanna Mora Segura
+
+Sofia Alejandra Cardona Cruz
+### Introduccion
+
+En esta práctica se desarrolló un sistema para adquirir y analizar las variaciones del volumen sanguíneo periférico mediante una señal fotopletismográfica o PPG, con el propósito de obtener características de la onda de pulso que permitan calcular el índice pletismográfico quirúrgico (SPI). Este índice se emplea como una medida relacionada con el balance entre la nocicepción y la analgesia, y utiliza la información obtenida a partir de la onda de pulso para estimar cambios asociados con la respuesta fisiológica del organismo [1][2].
+
+Para la adquisición de la señal se empleó un sensor MAX30102, el cual integra elementos ópticos que permiten detectar las variaciones en la absorción de luz producidas por los cambios en el volumen sanguíneo de los tejidos. El sensor fue conectado a una tarjeta Arduino UNO mediante comunicación I²C, permitiendo obtener digitalmente las muestras correspondientes a la señal PPG y transmitirlas posteriormente a un computador para su procesamiento.
+
+La señal fotopletismográfica presenta variaciones periódicas asociadas con los ciclos cardíacos. A partir de estas variaciones es posible identificar características como los máximos y mínimos de cada pulsación, la amplitud del pulso y el intervalo entre pulsaciones. Estas características son relevantes para el análisis del SPI, ya que la práctica plantea implementar un algoritmo de detección de máximos y mínimos para realizar el cálculo del índice con cada latido [1].
+
+Posteriormente, se implementó un sistema de adquisición y procesamiento mediante Arduino y MATLAB. Arduino permitió realizar la lectura de la señal proveniente del MAX30102 y transmitir las muestras mediante comunicación serial, mientras que MATLAB fue utilizado para almacenar, visualizar y procesar la señal obtenida. El sistema se configuró para realizar una captura de dos minutos, durante los cuales se evaluó inicialmente la respuesta del sujeto en condiciones de reposo, posteriormente durante la aplicación de la maniobra Cold Pressor Test (CPT) y finalmente durante un periodo de recuperación. Esta distribución corresponde al procedimiento establecido en la guía de laboratorio para observar las variaciones del SPI antes, durante y después del estímulo fisiológico [1]. Instr_Biomed_Biosensor - Laboratorio3.pdf
+
+De esta manera, el sistema desarrollado permitió integrar la adquisición óptica de la señal PPG, su transmisión hacia un computador y el procesamiento digital necesario para obtener características de la onda de pulso y calcular el SPI. El desarrollo de la práctica permitió además analizar las modificaciones de la señal ante un estímulo fisiológico y reconocer las posibilidades y limitaciones de utilizar una señal pletismográfica como indicador indirecto de la respuesta asociada a la nocicepción [1].
+
+### Objetivo General
+
+Desarrollar un sistema de adquisición y monitoreo continuo de la señal fotopletismográfica mediante un sensor MAX30102 y una tarjeta Arduino UNO, capaz de registrar las variaciones del volumen sanguíneo periférico y calcular el índice pletismográfico quirúrgico (SPI) durante condiciones de reposo, aplicación del Cold Pressor Test y recuperación.
+
+### Objetivos específicos
+
+* Reconocer las características fundamentales de la señal fotopletismográfica y su relación con las variaciones del volumen sanguíneo periférico.
+* Diseñar e implementar un sistema de adquisición basado en el sensor MAX30102 y una tarjeta Arduino UNO para obtener la señal PPG de un sujeto.
+* Verificar el funcionamiento del sistema de adquisición mediante la visualización de las variaciones de la señal PPG en tiempo real.
+* Implementar una comunicación serial entre Arduino y MATLAB para registrar las muestras de la señal fotopletismográfica durante un intervalo de tiempo definido.
+* Identificar los máximos y mínimos presentes en la señal PPG para obtener características asociadas con cada pulsación o latido.
+* Calcular el índice pletismográfico quirúrgico (SPI) a partir de las características extraídas de la señal PPG.
+* Evaluar el comportamiento del SPI durante condiciones de reposo, durante la aplicación del Cold Pressor Test y durante el periodo posterior al estímulo.
+* Analizar las variaciones obtenidas en el SPI y reconocer las limitaciones de emplear este índice como medida indirecta de la respuesta asociada con la nocicepción.
+* Representar gráficamente la evolución temporal del SPI durante la totalidad de la captura realizada.
+* 
 ## 11. Procedimiento
 
 ### Montaje y prueba inicial del circuito
