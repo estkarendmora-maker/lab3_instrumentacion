@@ -32,7 +32,7 @@ Desarrollar un sistema de adquisición y monitoreo continuo de la señal fotople
 * Evaluar el comportamiento del SPI durante condiciones de reposo, durante la aplicación del Cold Pressor Test y durante el periodo posterior al estímulo.
 * Analizar las variaciones obtenidas en el SPI y reconocer las limitaciones de emplear este índice como medida indirecta de la respuesta asociada con la nocicepción.
 * Representar gráficamente la evolución temporal del SPI durante la totalidad de la captura realizada.
-* 
+  
 ## 11. Procedimiento
 
 ### Montaje y prueba inicial del circuito
