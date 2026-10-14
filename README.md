@@ -28,9 +28,9 @@ Objetivos específicos
 *Reconocer las limitaciones del prototipo frente a una incubadora neonatal real.
 
   
-## Metodologia
+## Metodologia 
 
-### Montaje y prueba inicial del circuito
+### Montaje y prueba inicial 
 
 
 Para la construcción de la incubadora se utilizó como cabina una caja plástica transparente con tapa, que garantiza la visibilidad hacia el interior y reduce la pérdida de calor. Sus dimensiones fueron 44cm × 25cm × 30cm, superiores al mínimo de 44 cm × 20 cm × 22 cm indicado por el docente en el correo del 29 de septiembre para el modelo a escala. La tapa de la caja funciona como mecanismo de apertura y cierre.
@@ -101,7 +101,36 @@ La lógica de control se configuró de la siguiente manera:
 
 Se utilizaron dos LED para indicar el estado del sistema. El LED verde representa el estado de calentamiento desactivado y una temperatura de 37 °C, y el LED rojo indica una solicitud de calor o indicador de una alta temperatura.
 
-## Costos del prototipo
+### 6. Peso  
+La guía de laboratorio establece que la incubadora debe incorporar una galga o sensor de fuerza para estimar el peso del recién nacido y que el resultado debe visualizarse mediante una pantalla LCD o un sistema equivalente [9]. 
+
+Para cumplir este requerimiento se implementó una celda de carga tipo barra, un módulo amplificador y conversor HX711, un microcontrolador ESP32 y una pantalla LCD 16×2 con interfaz I2C. La celda de carga trabaja mediante galgas extensométricas organizadas eléctricamente como un puente de Wheatstone. Las pequeñas variaciones eléctricas producidas al deformarse la celda son acondicionadas por el HX711, permitiendo que el microcontrolador pueda obtener una lectura digital proporcional a la fuerza aplicada [10].  
+
+Para obtener mediciones adecuadas, la celda tipo barra no se instaló completamente apoyada sobre la superficie. Este tipo de sensor debe fijarse por uno de sus extremos mientras el extremo contrario recibe la carga, permitiendo que la zona central pueda deformarse ligeramente. El uso de tornillos y separadores evita restringir la deformación mecánica y mejora la repetibilidad de la medición [10]. Durante las primeras pruebas se observó una variación considerable de la lectura después de colocar y retirar una carga. Por esta razón se revisó el montaje mecánico, evitando que toda la barra quedara apoyada directamente sobre la mesa. Este ajuste fue importante porque factores como vibración, deriva, temperatura y montaje mecánico pueden afectar la lectura de una celda de carga y hacen necesaria una correcta calibración [10].   
+
+La celda empleada contaba con cuatro conductores: rojo (E+), negro(E-), verde (A+) y blanco (A-). La conexión utilizada coincide con una codificación común para celdas de cuatro conductores, aunque los colores pueden variar según el fabricante, por lo que siempre es recomendable comprobar el modelo específico [10]. El HX711 se conectó al ESP32 utilizando dos líneas digitales. En el montaje desarrollado, DOUT se conectó al GPIO 19 y SCK al GPIO 18. El módulo se alimentó a 3,3 V y compartió una tierra común con el ESP32. El HX711 permite trabajar con microcontroladores y está diseñado específicamente para obtener datos de celdas de carga basadas en galgas extensométricas [10].  
+
+La visualización se realizó mediante una LCD 16×2 provista de un módulo I2C, mediante un escáner I2C se identificó la dirección 0x27. La LCD se conectó al ESP32 utilizando SDA = GPIO 21 y SCL = GPIO 22.
+La pantalla fue programada para mostrar el peso directamente en kilogramos y la utilización de I2C permitió reducir el número de conductores necesarios entre la pantalla y el ESP32, dejando disponibles otros GPIO para los demás elementos de la incubadora. La calibración se realizó comenzando con la celda completamente descargada. Durante el inicio del programa se ejecutó una función de tara, tomando la condición sin carga como referencia de cero. Posteriormente se colocó una masa conocida y se registró la lectura cruda entregada por el HX711. Este procedimiento es el recomendado para determinar experimentalmente el factor de calibración de una balanza basada en HX711 [10]. El factor se obtuvo mediante:  
+<img width="434" height="81" alt="image" src="https://github.com/user-attachments/assets/f068c4fc-e400-4d04-9031-639f8bed4633" />  
+Cuando el sistema trabaja en kilogramos, la masa patrón debe introducirse en kilogramos. El factor calculado se incorporó posteriormente al programa mediante scale.set_scale(), mientras que scale.tare() permitió establecer nuevamente el cero cada vez que se encendía el sistema.Finalmente, el programa realiza varias lecturas consecutivas y emplea un pequeño promedio con el propósito de disminuir las fluctuaciones sin introducir un retraso excesivo en la visualización.  
+
+## Anális de resultados  
+
+### Análisis 1. Eficacia del sistema desarrollado para controlar la temperatura de la cabina, así como también el error en el cálculo del peso, empleando un patrón con peso conocido  
+
+La guía establece que el prototipo debe mantener la temperatura de la incubadora entre 36 °C y 37,5 °C mediante un sistema de calentamiento y circulación de aire [9]. Durante las pruebas experimentales, el sistema inició aproximadamente a la temperatura ambiente del laboratorio, cercana a 17 °C, y posteriormente alcanzó una temperatura máxima de aproximadamente 43 °C. Estos resultados demostraron que el sistema de calentamiento implementado posee la capacidad suficiente para elevar considerablemente la temperatura interna de la cabina; sin embargo, también se observó un sobrepaso respecto al límite superior de 37,5 °C establecido para la práctica.  
+
+El incremento desde aproximadamente 17 °C hasta 43 °C corresponde a una variación cercana a 26 °C, lo que evidencia una respuesta térmica considerable del sistema. No obstante, alcanzar 43 °C indica que la regulación todavía requiere un ajuste más preciso para evitar que la temperatura exceda el rango establecido. Este aspecto resulta especialmente importante en aplicaciones neonatales, ya que los recién nacidos, particularmente los prematuros, poseen una capacidad limitada de termorregulación y requieren un ambiente térmico cuidadosamente controlado [17].  
+
+En consecuencia, el sistema desarrollado fue eficaz para generar y conservar calor dentro de la cabina, pero durante la prueba realizada no logró limitar completamente el máximo de temperatura al intervalo de 36 °C–37,5 °C solicitado. Una posible mejora consiste en ajustar los puntos de activación y desactivación del elemento calefactor y reducir la inercia térmica del sistema, evitando que el calor acumulado continúe elevando la temperatura después de desconectar el bombillo. También puede mejorarse la posición del sensor de temperatura y la circulación producida por el ventilador para obtener una medición más representativa del aire presente en toda la cabina.  
+
+Para evaluar el sistema de medición se utilizó como patrón una masa conocida de 1,9 kg. Después de realizar la tara y calibración de la celda de carga, la pantalla LCD indicó aproximadamente 1,8 kg. El error absoluto se calculó E=|1.8-1.9| = 0.1 kg. Por tanto, el sistema presentó un error de aproximadamente 5,26 % respecto al patrón utilizado. Para un prototipo académico este resultado permitió comprobar que el conjunto formado por la celda de carga, el HX711 y el ESP32 fue capaz de estimar el peso aplicado y presentarlo directamente en la pantalla LCD. Sin embargo, la diferencia de 100 g demuestra que todavía existe margen para mejorar la exactitud mediante una calibración con varios puntos de referencia, un montaje mecánico más rígido y repetible y un mejor acondicionamiento de la señal de la celda [10].  
+
+
+También debe considerarse que una calibración realizada con un único patrón permite ajustar principalmente la pendiente de la conversión entre lectura digital y masa. Utilizar varios patrones distribuidos dentro del rango de trabajo permitiría verificar la linealidad del sistema y determinar si el error se mantiene aproximadamente constante para diferentes masas [10].  
+
+### Costos del prototipo
 
 A continuación, se presenta el presupuesto estimado de los materiales y componentes utilizados para la construcción de la incubadora neonatal a escala. Los precios están expresados en pesos colombianos (COP).
 
@@ -158,6 +187,24 @@ La principal diferencia está en su estructura y forma de transferencia de calor
 [7] International Electrotechnical Commission, IEC 60601-1: Medical electrical equipment – General requirements for basic safety and essential performance.
 
 [8] Ministerio de la Protección Social de Colombia, Decreto 4725 de 2005, por el cual se reglamenta el régimen de registros sanitarios, permiso de comercialización y vigilancia sanitaria de los dispositivos médicos para uso humano.
+[9] Universidad Militar Nueva Granada. (2025). Guía de preparación práctica de laboratorio: Diseño y construcción de una incubadora neonatal a escala. Laboratorio de Instrumentación Biomédica y Biosensores.
+
+[10] SparkFun Electronics. (s. f.). Load Cell Amplifier HX711 Breakout Hookup Guide. SparkFun Learn. https://learn.sparkfun.com/tutorials/load-cell-amplifier-hx711-breakout-hookup-guide/all/
+
+[11] Instrumentalia S.A.S. (s. f.). Incubadora YP920. Instrumentalia.https://instrumentalia.com.co/117-equipo-medico?page=9  
+
+[12] Instrumentalia S.A.S. (s. f.). Incubadora neonatal YP2000. Instrumentalia. https://instrumentalia.com.co/medicina/61297-incubadora-yp2000.html  
+
+[13] LEEX Medical. (s. f.). Incubadora neonatal B3.https://leexmedical.com/product/incubadora-neonatal-b3/  
+
+[14] IMEDS Colombia. (s. f.). Incubadora neonatal B3.https://www.imedscolombia.com/tienda-on-line-1/incubadoras/  
+
+[15] World Health Organization. (2025). Essential newborn care course, second edition. World Health Organization.https://www.who.int/publications/i/item/9789240112698  
+
+[16] World Health Organization. (2021). National guidelines for comprehensive newborn care. WHO Platform for Maternal, Newborn, Child and Adolescent Health. https://platform.who.int/docs/default-source/mca-documents/policy-documents/by-country/nga/nga-ngcnc-nov-2021-first-edition-print-ready---08-11-2021--mnx38-fu-bpvgkat5x74ppg6.pdf  
+
+
+[17] Knobel-Dail, R. B. (2014). Role of effective thermoregulation in premature neonates. Research and Reports in Neonatology, 4, 147–156.  https://doi.org/10.2147/RRN.S52377  
 
 [18] Scottish Government, NHS Greater Glasgow and Clyde, “Thermal care of the neonate,” Clinical Guidelines
 
