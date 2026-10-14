@@ -139,7 +139,7 @@ Para evaluar el sistema de medición se utilizó como patrón una masa conocida 
 
 También debe considerarse que una calibración realizada con un único patrón permite ajustar principalmente la pendiente de la conversión entre lectura digital y masa. Utilizar varios patrones distribuidos dentro del rango de trabajo permitiría verificar la linealidad del sistema y determinar si el error se mantiene aproximadamente constante para diferentes masas [10].  
 
-### Costos del prototipo
+### Análisis 2: Compare el sistema desarrollado con los que ofrecen los fabricantes sugeridos en términos de capacidades, limitaciones y precio. 
 
 A continuación, se presenta el presupuesto estimado de los materiales y componentes utilizados para la construcción de la incubadora neonatal a escala. Los precios están expresados en pesos colombianos (COP).
 
@@ -161,6 +161,16 @@ A continuación, se presenta el presupuesto estimado de los materiales y compone
 | 14 | Base y estructura de soporte | 1 lote | $25.000 |
 | 15 | Pegamento, tornillos y elementos de fijación | 1 lote | $10.000 |
 | | **Costo total estimado** | | **$212.075 COP** |
+
+En el mercado colombiano existen incubadoras neonatales comerciales con un nivel de integración considerablemente mayor. Por ejemplo, Instrumentalia YP920 se ofrece públicamente por $28.758.350 COP y dispone de modos de control por temperatura del aire y por temperatura del bebé [11].  
+
+La Instrumentalia YP2000 tiene un precio publicado de $53.391.350 COP e incorpora una cabina cerrada de doble pared y modos de control por aire y por temperatura del paciente [12]. Otro ejemplo es la COMEN B3, comercializada en Colombia por IMEDS con un precio publicado de $30.710.000 COP antes de IVA. Este equipo incorpora control preciso de temperatura, humidificación activa, doble pared, cortina de aire, pantalla interactiva y opción de balanza digital [14].   
+
+La incubadora LEEX B3 presenta características clínicas similares, entre ellas control automático de temperatura, humidificación activa, doble pared, cortina de aire y una balanza digital opcional que permite pesar al paciente sin retirarlo del ambiente térmico controlado [13].  
+
+Esto significa que el prototipo construido tiene un costo aproximadamente 99,3 % menor que la YP920, 99,3 % menor que la B3 y 99,6 % menor que la YP2000. Sin embargo, esta diferencia no significa que ambos sistemas tengan prestaciones equivalentes. Las incubadoras comerciales incorporan sistemas redundantes de seguridad, control de humedad, modos de control por temperatura de piel, alarmas, mejores mecanismos de aislamiento térmico y, dependiendo del modelo, medición de peso y otros sistemas de monitoreo [11]–[14].  
+
+Por lo tanto, el prototipo desarrollado resulta adecuado como plataforma académica para demostrar principios de instrumentación, medición de peso y regulación térmica, pero no puede considerarse equivalente a una incubadora de uso clínico. La gran diferencia económica se explica principalmente por el nivel de seguridad, precisión, redundancia, certificación, diseño sanitario y funciones adicionales requeridas en equipos destinados al cuidado real de pacientes neonatales.  
 
 ## Discusión
 **Pregunta 1. ¿Qué otras variables (y por qué) además de las aquí mencionadas son críticas en el monitoreo neonatal?**
