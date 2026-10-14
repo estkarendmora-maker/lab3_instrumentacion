@@ -197,8 +197,17 @@ Por último, se necesitan materiales de grado médico y fáciles de desinfectar,
 **Pregunta 3. ¿Qué semejanzas hay entre una incubadora neonatal y una servo-cuna?**
 Tanto la incubadora neonatal y la servo-cuna son dispositivos que proporcionan apoyo térmico al recién nacido, para mantener una temperatura corporal adecuada. Ambos equipos incorporan sensores de temperatura, sistemas de calentamiento y mecanismos de control que permiten regular el aporte de calor según las condiciones necesitadas [18], [19].
 
-La principal diferencia está en su estructura y forma de transferencia de calor. La incubadora neonatal proporciona un ambiente cerrado y controlado, y la servo-cuna abierta y permite un acceso más directo al recién nacido durante los procedimientos médicos. [19], [20].
+La principal diferencia está en su estructura y forma de transferencia de calor. La incubadora neonatal proporciona un ambiente cerrado y controlado, y la servo-cuna abierta y permite un acceso más directo al recién nacido durante los procedimientos médicos. [19], [20].  
 
+## Conclusión  
+
+El desarrollo del prototipo permitió comprobar que es posible integrar, en un sistema a escala, funciones básicas de una incubadora neonatal como el control de temperatura, la medición de peso y la visualización de variables mediante una interfaz sencilla. El sistema térmico logró elevar la temperatura interna desde aproximadamente 17 °C hasta 43 °C, lo que demostró que el mecanismo de calefacción y circulación de aire tiene capacidad suficiente para modificar las condiciones de la cabina. Sin embargo, el sobrepaso del límite superior establecido evidenció que el control todavía necesita ajustes para mantener la temperatura de forma más estable dentro del rango de 36 °C a 37,5 °C requerido para la práctica.   
+
+En cuanto al sistema de pesaje, la integración de la celda de carga, el módulo HX711, el ESP32 y la pantalla LCD permitió estimar el peso del neonato simulado de manera funcional. Para un patrón de 1,9 kg se obtuvo una lectura cercana a 1,8 kg, correspondiente a un error de aproximadamente 5,26 %, lo que muestra que el sistema es capaz de realizar una medición útil, aunque todavía puede mejorarse mediante una calibración multipunto y un montaje mecánico más rígido y repetible.    
+
+Los resultados obtenidos también permitieron identificar claramente la diferencia entre un prototipo académico y una incubadora neonatal comercial. Aunque el sistema construido tuvo un costo significativamente menor, las incubadoras clínicas incorporan funciones adicionales de seguridad, control de humedad, alarmas, monitoreo fisiológico, materiales de grado médico y sistemas redundantes que son necesarios para su uso real con pacientes.  
+
+Como siguiente paso, sería necesario mejorar la precisión del control térmico, optimizar la calibración del sistema de peso e integrar variables adicionales como saturación de oxígeno, frecuencia cardíaca y frecuencia respiratoria. Estas mejoras permitirían acercar el prototipo a un sistema de monitoreo neonatal más completo, manteniendo su utilidad como plataforma de aprendizaje en instrumentación biomédica y control.
 ## Bibliografia
 [1] C. G. K. Tran et al., “Designing a low-cost multifunctional infant incubator,” J. Lab. Autom., vol. 19, no. 3, pp. 332–337, Jun. 2014.   h
 
