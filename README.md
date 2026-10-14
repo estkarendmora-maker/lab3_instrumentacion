@@ -163,10 +163,19 @@ A continuación, se presenta el presupuesto estimado de los materiales y compone
 | | **Costo total estimado** | | **$212.075 COP** |
 
 ## Discusión
-**Pregunta 1. ¿Qué otras variables (y por qué) además de las aquí mencionadas son críticas en el monitoreo neonatal? **
+**Pregunta 1. ¿Qué otras variables (y por qué) además de las aquí mencionadas son críticas en el monitoreo neonatal?**
+Además de temperatura, humedad, flujo de aire y peso, es importante monitorear variables fisiológicas directamente relacionadas con la condición cardiorrespiratoria del recién nacido. Entre ellas se encuentran la frecuencia cardíaca, frecuencia respiratoria, saturación de oxígeno y presión arterial, variables que forman parte de la evaluación clínica neonatal y permiten identificar alteraciones cardiovasculares o respiratorias [16].  
 
+La saturación de oxígeno (SpO₂) es especialmente importante porque permite identificar situaciones de hipoxemia y evaluar la respuesta del paciente cuando requiere oxigenoterapia. Las guías neonatales recomiendan utilizar pulsioximetría para supervisar la oxigenación cuando existe dificultad respiratoria o necesidad de oxígeno suplementario [16].   
 
-**Pregunta 2. ¿Qué haría falta para convertir el sistema desarrollado en una incubadora neonatal real? **
+La frecuencia respiratoria permite detectar episodios de respiración anormal, apnea o dificultad respiratoria, mientras que la frecuencia cardíaca proporciona información inmediata sobre el estado cardiovascular del neonato. En la evaluación del recién nacido se consideran ambas variables junto con la saturación de oxígeno como parámetros relevantes del seguimiento clínico [16].   
+
+También debe considerarse la concentración de oxígeno dentro del entorno de la incubadora cuando se administra oxígeno suplementario. Mantener una concentración adecuada es importante porque tanto una oxigenación insuficiente como una exposición excesiva pueden representar riesgos para el recién nacido. Por esta razón, las incubadoras clínicas cuentan con sistemas de monitoreo y alarmas que van mucho más allá del control básico de temperatura desarrollado en el prototipo [13], [16].   
+
+En consecuencia, una versión más completa del sistema podría integrar sensores para SpO₂, frecuencia cardíaca, frecuencia respiratoria y presión arterial, además de mantener las variables ambientales ya implementadas. Esto permitiría que el sistema no solo controlara el ambiente de la incubadora, sino que también ofreciera información sobre el estado fisiológico del paciente [15], [16].  
+ 
+
+**Pregunta 2. ¿Qué haría falta para convertir el sistema desarrollado en una incubadora neonatal real?**
 El prototipo ilustra el principio de operación (calefacción, control de temperatura y pesaje), pero está lejos de ser un dispositivo médico. Para convertirlo en una incubadora neonatal real harían falta varios cambios.
 
 Primero, un control de temperatura más completo: una incubadora real combina el control de la temperatura del aire con el control servo por temperatura de la piel del neonato, medida con una sonda cutánea [3], [4]. El calefactor también debería ser un elemento resistivo con ventilador, ya que el bombillo del prototipo genera calor localizado e iluminación constante, lo que no es adecuado para un neonato. Además, se requiere control de humedad, que reduce las pérdidas de agua por la piel en prematuros, y la posibilidad de suministrar oxígeno suplementario [1], [4].
@@ -175,7 +184,7 @@ Segundo, un sistema de alarmas y seguridad independiente, con alertas audibles y
 
 Por último, se necesitan materiales de grado médico y fáciles de desinfectar, una cubierta de doble pared con filtración de aire y accesos seguros en lugar de una tapa de caja, una celda de carga calibrada con resolución de gramos, y una validación clínica del equipo.
 
-**Pregunta 3. ¿Qué semejanzas hay entre una incubadora neonatal y una servo-cuna? **
+**Pregunta 3. ¿Qué semejanzas hay entre una incubadora neonatal y una servo-cuna?**
 Tanto la incubadora neonatal y la servo-cuna son dispositivos que proporcionan apoyo térmico al recién nacido, para mantener una temperatura corporal adecuada. Ambos equipos incorporan sensores de temperatura, sistemas de calentamiento y mecanismos de control que permiten regular el aporte de calor según las condiciones necesitadas [18], [19].
 
 La principal diferencia está en su estructura y forma de transferencia de calor. La incubadora neonatal proporciona un ambiente cerrado y controlado, y la servo-cuna abierta y permite un acceso más directo al recién nacido durante los procedimientos médicos. [19], [20].
