@@ -221,18 +221,18 @@ La principal diferencia está en su estructura y forma de transferencia de calor
 
 [11] Instrumentalia S.A.S. (s. f.). Incubadora YP920. Instrumentalia.https://instrumentalia.com.co/117-equipo-medico?page=9  
 
-[12] Instrumentalia S.A.S. (s. f.). Incubadora neonatal YP2000. Instrumentalia. https://instrumentalia.com.co/medicina/61297-incubadora-yp2000.html  
+[12] Instrumentalia S.A.S. (s. f.). Incubadora neonatal YP2000. Instrumentalia.   
 
 [13] LEEX Medical. (s. f.). Incubadora neonatal B3.https://leexmedical.com/product/incubadora-neonatal-b3/  
 
 [14] IMEDS Colombia. (s. f.). Incubadora neonatal B3.https://www.imedscolombia.com/tienda-on-line-1/incubadoras/  
 
-[15] World Health Organization. (2025). Essential newborn care course, second edition. World Health Organization.https://www.who.int/publications/i/item/9789240112698  
+[15] World Health Organization. (2025). Essential newborn care course, second edition. World Health Organization.  
 
-[16] World Health Organization. (2021). National guidelines for comprehensive newborn care. WHO Platform for Maternal, Newborn, Child and Adolescent Health. https://platform.who.int/docs/default-source/mca-documents/policy-documents/by-country/nga/nga-ngcnc-nov-2021-first-edition-print-ready---08-11-2021--mnx38-fu-bpvgkat5x74ppg6.pdf  
+[16] World Health Organization. (2021). National guidelines for comprehensive newborn care. WHO Platform for Maternal, Newborn, Child and Adolescent Health. 
 
 
-[17] Knobel-Dail, R. B. (2014). Role of effective thermoregulation in premature neonates. Research and Reports in Neonatology, 4, 147–156.  https://doi.org/10.2147/RRN.S52377  
+[17] Knobel-Dail, R. B. (2014). Role of effective thermoregulation in premature neonates. Research and Reports in Neonatology, 4, 147–156.  
 
 [18] Scottish Government, NHS Greater Glasgow and Clyde, “Thermal care of the neonate,” Clinical Guidelines
 
