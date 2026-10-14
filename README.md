@@ -114,6 +114,10 @@ La visualización se realizó mediante una LCD 16×2 provista de un módulo I2C,
 La pantalla fue programada para mostrar el peso directamente en kilogramos y la utilización de I2C permitió reducir el número de conductores necesarios entre la pantalla y el ESP32, dejando disponibles otros GPIO para los demás elementos de la incubadora. La calibración se realizó comenzando con la celda completamente descargada. Durante el inicio del programa se ejecutó una función de tara, tomando la condición sin carga como referencia de cero. Posteriormente se colocó una masa conocida y se registró la lectura cruda entregada por el HX711. Este procedimiento es el recomendado para determinar experimentalmente el factor de calibración de una balanza basada en HX711 [10]. El factor se obtuvo mediante:  
 <img width="434" height="81" alt="image" src="https://github.com/user-attachments/assets/f068c4fc-e400-4d04-9031-639f8bed4633" />  
 Cuando el sistema trabaja en kilogramos, la masa patrón debe introducirse en kilogramos. El factor calculado se incorporó posteriormente al programa mediante scale.set_scale(), mientras que scale.tare() permitió establecer nuevamente el cero cada vez que se encendía el sistema.Finalmente, el programa realiza varias lecturas consecutivas y emplea un pequeño promedio con el propósito de disminuir las fluctuaciones sin introducir un retraso excesivo en la visualización.  
+<img width="1600" height="1336" alt="image" src="https://github.com/user-attachments/assets/fcc87213-640e-4e74-8136-cb5a046d93c5" />
+**Figura 3. Montaje físico del circuito para medir peso.**  
+
+
 
 ## Anális de resultados  
 
