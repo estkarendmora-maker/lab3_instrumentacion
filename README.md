@@ -59,18 +59,20 @@ El voltaje del punto medio del divisor se conectó al pin GPIO 34 de la ESP32.
 ### 2. Adquisición y procesamiento de la señal
 
 En Arduino IDE. Para cada ciclo la ESP32 tomó 100 muestras de voltaje y calculó su promedio para reducir las fluctuaciones de la lectura.
-A partir de este voltaje promedio, se calculó la resistencia del termistor.
 
-\[
-R_{NTC}=R_F\left(\frac{V_{CC}-V_{NTC}}{V_{NTC}}\right)
-\]
+A partir del voltaje promedio, se calculó la resistencia del termistor mediante la ecuación del divisor de voltaje:
+
+$$
+R_{NTC} = R_F \left(\frac{V_{CC} - V_{NTC}}{V_{NTC}}\right)
+$$
 
 Donde:
 
-- \(R_{NTC}\): resistencia calculada del termistor.
-- \(R_F\): resistencia fija de 3,3 kΩ.
-- \(V_{CC}\): voltaje de alimentación de 3,3 V.
-- \(V_{NTC}\): voltaje medido en el punto medio del divisor.
+- $R_{NTC}$: resistencia calculada del termistor.
+- $R_F$: resistencia fija de 3,3 kΩ.
+- $V_{CC}$: voltaje de alimentación de 3,3 V.
+- $V_{NTC}$: voltaje medido en el punto medio del divisor.
+
 
 La resistencia obtenida se utilizó para estimar la temperatura en grados Celsius, basada en puntos de calibración experimentales.
 
