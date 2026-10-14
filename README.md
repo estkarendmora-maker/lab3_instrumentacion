@@ -31,7 +31,6 @@ Objetivos específicos
 ## Metodologia
 
 ### Montaje y prueba inicial del circuito
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/ebe73d66-67a9-47ad-8cb6-091d512be53a" />
 
 
 Para la construcción de la incubadora se utilizó como cabina una caja plástica transparente con tapa, que garantiza la visibilidad hacia el interior y reduce la pérdida de calor. Sus dimensiones fueron 44cm × 25cm × 30cm, superiores al mínimo de 44 cm × 20 cm × 22 cm indicado por el docente en el correo del 29 de septiembre para el modelo a escala. La tapa de la caja funciona como mecanismo de apertura y cierre.
