@@ -200,15 +200,15 @@ Tanto la incubadora neonatal y la servo-cuna son dispositivos que proporcionan a
 La principal diferencia está en su estructura y forma de transferencia de calor. La incubadora neonatal proporciona un ambiente cerrado y controlado, y la servo-cuna abierta y permite un acceso más directo al recién nacido durante los procedimientos médicos. [19], [20].
 
 ## Bibliografia
-[1] C. G. K. Tran et al., “Designing a low-cost multifunctional infant incubator,” J. Lab. Autom., vol. 19, no. 3, pp. 332–337, Jun. 2014. https://doi.org/10.1177/2211068214530391
+[1] C. G. K. Tran et al., “Designing a low-cost multifunctional infant incubator,” J. Lab. Autom., vol. 19, no. 3, pp. 332–337, Jun. 2014.   h
 
 [2] L. Restrepo-Pérez, N. Durango-Londoño, N. E. Gómez-Suárez, F. González-Ramírez y N. Rivera-Bonilla, “Prototipo de incubadora neonatal,” Revista Ingeniería Biomédica, vol. 1, no. 1, pp. 55–59, 2007.
 
-[3] M. van Leeuwen et al., European Standards of Care for Newborn Health: Temperature management in newborn infants, EFCNI, Nov. 2018. https://newborn-health-standards.org
+[3] M. van Leeuwen et al., European Standards of Care for Newborn Health: Temperature management in newborn infants, EFCNI, Nov. 2018.   
 
-[4] R. B. Knobel-Dail, “Role of effective thermoregulation in premature neonates,” Research and Reports in Neonatology, vol. 4, pp. 147–156, 2014. https://doi.org/10.2147/RRN.S52377
+[4] R. B. Knobel-Dail, “Role of effective thermoregulation in premature neonates,” Research and Reports in Neonatology, vol. 4, pp. 147–156, 2014.   
 
-[5] R. E. Black et al., “Global, regional, and national causes of child mortality in 2008: a systematic analysis,” Lancet, vol. 375, pp. 1969–1987, Jun. 2010. https://doi.org/10.1016/S0140-6736(10)60549-1
+[5] R. E. Black et al., “Global, regional, and national causes of child mortality in 2008: a systematic analysis,” Lancet, vol. 375, pp. 1969–1987, Jun. 2010.  
 
 [6] International Electrotechnical Commission, IEC 60601-2-19: Medical electrical equipment – Particular requirements for the basic safety and essential performance of infant incubators.
 
@@ -217,15 +217,15 @@ La principal diferencia está en su estructura y forma de transferencia de calor
 [8] Ministerio de la Protección Social de Colombia, Decreto 4725 de 2005, por el cual se reglamenta el régimen de registros sanitarios, permiso de comercialización y vigilancia sanitaria de los dispositivos médicos para uso humano.
 [9] Universidad Militar Nueva Granada. (2025). Guía de preparación práctica de laboratorio: Diseño y construcción de una incubadora neonatal a escala. Laboratorio de Instrumentación Biomédica y Biosensores.
 
-[10] SparkFun Electronics. (s. f.). Load Cell Amplifier HX711 Breakout Hookup Guide. SparkFun Learn. https://learn.sparkfun.com/tutorials/load-cell-amplifier-hx711-breakout-hookup-guide/all/
+[10] SparkFun Electronics. (s. f.). Load Cell Amplifier HX711 Breakout Hookup Guide. SparkFun Learn.  
 
-[11] Instrumentalia S.A.S. (s. f.). Incubadora YP920. Instrumentalia.https://instrumentalia.com.co/117-equipo-medico?page=9  
+[11] Instrumentalia S.A.S. (s. f.). Incubadora YP920.  
 
 [12] Instrumentalia S.A.S. (s. f.). Incubadora neonatal YP2000. Instrumentalia.   
 
-[13] LEEX Medical. (s. f.). Incubadora neonatal B3.https://leexmedical.com/product/incubadora-neonatal-b3/  
+[13] LEEX Medical. (s. f.). Incubadora neonatal B3.  
 
-[14] IMEDS Colombia. (s. f.). Incubadora neonatal B3.https://www.imedscolombia.com/tienda-on-line-1/incubadoras/  
+[14] IMEDS Colombia. (s. f.). Incubadora neonatal B3.   
 
 [15] World Health Organization. (2025). Essential newborn care course, second edition. World Health Organization.  
 
