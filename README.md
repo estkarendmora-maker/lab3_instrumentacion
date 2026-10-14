@@ -7,45 +7,42 @@ Karen Dayanna Mora Segura
 Sofia Alejandra Cardona Cruz
 ### Introduccion
 
-En esta práctica se desarrolló un sistema para adquirir y analizar las variaciones del volumen sanguíneo periférico mediante una señal fotopletismográfica o PPG, con el propósito de obtener características de la onda de pulso que permitan calcular el índice pletismográfico quirúrgico (SPI). Este índice se emplea como una medida relacionada con el balance entre la nocicepción y la analgesia, y utiliza la información obtenida a partir de la onda de pulso para estimar cambios asociados con la respuesta fisiológica del organismo [2]3].
+En esta práctica se diseñó y construyó un modelo a escala de una incubadora neonatal, un dispositivo médico cuya finalidad es generar un ambiente controlado que se asemeje lo más posible a las condiciones del vientre materno y favorezca la supervivencia y el desarrollo del recién nacido [1], [2]. La variable más importante es la temperatura, que debe mantenerse alrededor de los 37 °C [3]. En esta práctica, el rango objetivo fue de 36 °C a 37,5 °C. La termorregulación es especialmente crítica en los neonatos prematuros, que tienen la piel más delgada y un sistema nervioso más inmaduro, lo que limita su capacidad para regular la temperatura corporal [4].
 
-Para la adquisición de la señal se empleó un sensor MAX30102, el cual integra elementos ópticos que permiten detectar las variaciones en la absorción de luz producidas por los cambios en el volumen sanguíneo de los tejidos. El sensor fue conectado a una tarjeta Arduino UNO mediante comunicación I²C, permitiendo obtener digitalmente las muestras correspondientes a la señal PPG y transmitirlas posteriormente a un computador para su procesamiento.
+El modelo se construyó sobre una caja plástica transparente con tapa, que permite ver el interior y reduce las pérdidas de calor. A la caja se le hicieron modificaciones para el paso del cableado y un orificio para introducir la mano, de modo que se pueda manipular al neonato sin abrir por completo la cubierta y perturbar el ambiente interno. Para regular la temperatura se utilizó un bombillo como elemento calefactor y un ventilador que hace circular el aire y distribuye el calor dentro de la cabina, junto con un sensor de temperatura y un circuito de control de lazo cerrado. Además, se incorporó una celda de carga para estimar el peso del neonato, mostrado en una pantalla LCD, y un panel de LEDs que indica si la temperatura está dentro del rango, por encima o por debajo. Como paciente se empleó un muñeco que simula al recién nacido.
 
-La señal fotopletismográfica presenta variaciones periódicas asociadas con los ciclos cardíacos. A partir de estas variaciones es posible identificar características como los máximos y mínimos de cada pulsación, la amplitud del pulso y el intervalo entre pulsaciones. Estas características son relevantes para el análisis del SPI, ya que la práctica plantea implementar un algoritmo de detección de máximos y mínimos para realizar el cálculo del índice con cada latido [2].
+La práctica permitió aplicar conocimientos de instrumentación, electrónica y sistemas de control a un dispositivo biomédico real. También permitió reconocer las limitaciones de un prototipo frente a una incubadora comercial.
 
-Posteriormente, se implementó un sistema de adquisición y procesamiento mediante Arduino y MATLAB. Arduino permitió realizar la lectura de la señal proveniente del MAX30102 y transmitir las muestras mediante comunicación serial, mientras que MATLAB fue utilizado para almacenar, visualizar y procesar la señal obtenida. El sistema se configuró para realizar una captura de dos minutos, durante los cuales se evaluó inicialmente la respuesta del sujeto en condiciones de reposo, posteriormente durante la aplicación de la maniobra Cold Pressor Test (CPT) y finalmente durante un periodo de recuperación. Esta distribución corresponde al procedimiento establecido en la guía de laboratorio para observar las variaciones del SPI antes, durante y después del estímulo fisiológico [2]. Instr_Biomed_Biosensor - Laboratorio3.pdf
+Objetivo general
 
-De esta manera, el sistema desarrollado permitió integrar la adquisición óptica de la señal PPG, su transmisión hacia un computador y el procesamiento digital necesario para obtener características de la onda de pulso y calcular el SPI. El desarrollo de la práctica permitió además analizar las modificaciones de la señal ante un estímulo fisiológico y reconocer las posibilidades y limitaciones de utilizar una señal pletismográfica como indicador indirecto de la respuesta asociada a la nocicepción [2].
+*Diseñar y construir un modelo a escala de una incubadora neonatal capaz de mantener la temperatura interna entre 36 °C y 37,5 °C mediante un sistema de calefacción con circulación de aire, y de estimar el peso del recién nacido, mostrando ambas variables al usuario.
 
-### Objetivo General
+Objetivos específicos
+*Identificar las partes principales de una incubadora neonatal y la función que cumple cada una.
+*Construir una cabina a escala con dimensiones no menores a 44 cm × 20 cm × 22 cm, con cubierta transparente, aislante y con acceso para manipulación.
+*Implementar un sistema de calefacción con un bombillo y un ventilador, controlado en lazo cerrado a partir de un sensor de temperatura.
+*Implementar un panel de LEDs que indique si la temperatura está dentro, por encima o por debajo del rango establecido.
+*Integrar una celda de carga y una pantalla LCD para estimar y mostrar el peso del neonato.
+*Verificar el desempeño del sistema, evaluando la capacidad de mantener la temperatura en el rango y el error en la medición del peso con un patrón de masa conocida.
+*Calcular el costo total y parcial del prototipo y compararlo con soluciones comerciales.
+*Reconocer las limitaciones del prototipo frente a una incubadora neonatal real.
 
-Desarrollar un sistema de adquisición y monitoreo continuo de la señal fotopletismográfica mediante un sensor MAX30102 y una tarjeta Arduino UNO, capaz de registrar las variaciones del volumen sanguíneo periférico y calcular el índice pletismográfico quirúrgico (SPI) durante condiciones de reposo, aplicación del Cold Pressor Test y recuperación.
-
-### Objetivos específicos
-
-* Reconocer las características fundamentales de la señal fotopletismográfica y su relación con las variaciones del volumen sanguíneo periférico.
-* Diseñar e implementar un sistema de adquisición basado en el sensor MAX30102 y una tarjeta Arduino UNO para obtener la señal PPG de un sujeto.
-* Verificar el funcionamiento del sistema de adquisición mediante la visualización de las variaciones de la señal PPG en tiempo real.
-* Implementar una comunicación serial entre Arduino y MATLAB para registrar las muestras de la señal fotopletismográfica durante un intervalo de tiempo definido.
-* Identificar los máximos y mínimos presentes en la señal PPG para obtener características asociadas con cada pulsación o latido.
-* Calcular el índice pletismográfico quirúrgico (SPI) a partir de las características extraídas de la señal PPG.
-* Evaluar el comportamiento del SPI durante condiciones de reposo, durante la aplicación del Cold Pressor Test y durante el periodo posterior al estímulo.
-* Analizar las variaciones obtenidas en el SPI y reconocer las limitaciones de emplear este índice como medida indirecta de la respuesta asociada con la nocicepción.
-* Representar gráficamente la evolución temporal del SPI durante la totalidad de la captura realizada.
   
 ## 11. Procedimiento
 
 ### Montaje y prueba inicial del circuito
-
-<img width="1200" height="1600" alt="image" src="https://github.com/user-attachments/assets/6fe5357d-e4ff-4b9c-a9c5-8e047826f56b" />
-
-Inicialmente se realizó el montaje del circuito destinado a la adquisición de la señal relacionada con la respuesta fisiológica ante el estímulo frío. En una primera etapa se utilizó el sensor TCRT1000, buscando obtener una señal óptica que permitiera posteriormente realizar el procesamiento de la señal y la estimación de las variables fisiológicas.
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/ebe73d66-67a9-47ad-8cb6-091d512be53a" />
 
 
-Sin embargo, durante las pruebas iniciales el montaje con el sensor TCRT1000 no permitió obtener una señal suficientemente estable y adecuada para realizar el procesamiento requerido. Debido a esta limitación experimental, se decidió utilizar el sensor MAX30102, el cual permite realizar la adquisición de señales ópticas asociadas a la fotopletismografía (PPG). Esta modificación permitió obtener una señal adecuada para continuar con el procesamiento en MATLAB y realizar la estimación de la frecuencia cardiaca, el intervalo entre latidos, la amplitud de la onda pletismográfica y el índice SPI.
+Para la construcción de la incubadora se utilizó como cabina una caja plástica transparente con tapa, que garantiza la visibilidad hacia el interior y reduce la pérdida de calor. Sus dimensiones fueron 44cm × 25cm × 30cm, superiores al mínimo de 44 cm × 20 cm × 22 cm indicado por el docente en el correo del 29 de septiembre para el modelo a escala. La tapa de la caja funciona como mecanismo de apertura y cierre.
 
+Posteriormente, se le hicieron modificaciones a la caja. Se perforaron orificios para pasar el cableado de los sensores, el ventilador y el bombillo hacia el exterior, donde se ubicaron la electrónica y la pantalla LCD. También se abrió un hueco con forma de arco para poder introducir la mano y simular el acceso a un neonato dentro de una incubadora real sin necesidad de retirar la tapa.
 
-Por lo tanto, el circuito inicialmente planteado con el TCRT1000 corresponde a una primera prueba experimental, mientras que el circuito con el MAX30102 corresponde al montaje final utilizado para la adquisición de los datos analizados en la práctica.
+Dentro de la cabina se instaló una base de madera cubierta con un colchón de espuma, sobre la cual se acostó un muñeco que simula al recién nacido. Esta base se montó sobre el sistema de pesaje, de modo que el peso del muñeco pudiera medirse. La celda de carga se conectó al microcontrolador mediante su módulo de acondicionamiento HX711, se calibró con masas conocidas y su valor se mostró en una pantalla LCD 16×2 con módulo I²C, alojada en una carcasa roja impresa en 3D.
+
+Para el sistema de calefacción, en uno de los extremos de la cabina se ubicó un bombillo que actúa como fuente de calor y, junto a él, un ventilador pequeño que hace circular el aire y distribuye la temperatura en el interior. Cerca del muñeco se ubicó un sensor de temperatura que mide la temperatura del aire. El bombillo es controlado por el circuito de lazo cerrado diseñado en la Parte A, que lo enciende o lo apaga según la lectura del sensor para mantener la temperatura entre 36 °C y 37,5 °C. Además, un panel de 3 LEDs indica el estado de la temperatura: se enciende un LED verde cuando está dentro del rango y un LED rojo, uno para cada caso, cuando está por encima o por debajo.
+
+Finalmente, se realizaron las pruebas de funcionamiento. Se encendió el sistema y se registró la evolución de la temperatura hasta alcanzar y sostener el rango establecido, se verificó el cambio de los LEDs según el estado y se midió el error del peso empleando un patrón de masa conocida. Con los componentes utilizados se calculó el costo parcial de cada parte y el costo total del prototipo, para compararlo con equipos comerciales.
 
 ### Circuito final utilizando el sensor MAX30102
 Para la adquisición final de la señal se utilizó un ESP32 conectado a un sensor óptico MAX30102. La comunicación entre ambos dispositivos se realizó mediante el protocolo I²C.
@@ -286,43 +283,32 @@ El uso de este tipo de índices puede complementar la evaluación del balance en
 Como siguiente paso, sería conveniente validar el sistema en un mayor número de participantes y comparar los valores obtenidos con un equipo clínico o un monitor comercial de SPI. También podría evaluarse la respuesta frente a diferentes intensidades de estímulo y analizar la repetibilidad de las mediciones, con el fin de determinar qué tan cercana es la estimación experimental al comportamiento de un sistema clínicamente validado.
 
 ## Discusión
-**Pregunta 1. ¿Cómo se relacionan las variaciones del volumen sanguíneo periférico con el balance autonómico?**
+**Pregunta 1. ¿Qué otras variables (y por qué) además de las aquí mencionadas son críticas en el monitoreo neonatal? **
 
-Las variaciones de la señal pletismográfica periférica están relacionadas con modificaciones en el tono vascular producidas por el sistema nervioso autónomo. Un aumento de la actividad simpática puede generar vasoconstricción periférica y reducir la amplitud pulsátil registrada mediante fotopletismografía [1], [3]. La PPGA se calcula a partir de la diferencia entre un máximo y el valle correspondiente de la señal PPG, por lo que su disminución permite identificar cambios asociados con vasoconstricción periférica [1].  
 
-En el CPT se ha demostrado un aumento de indicadores de actividad simpática y una reducción relativa de la actividad parasimpática [7]. Esto coincide con los resultados experimentales obtenidos, ya que durante el estímulo frío la PPGA disminuyó de aproximadamente 706,6 a 121,0, mientras que la frecuencia cardiaca aumentó de 55,0 a 75,4 bpm. Estos cambios sugieren un desplazamiento del balance autonómico hacia una mayor actividad simpática durante el estímulo [7].  
+**Pregunta 2. ¿Qué haría falta para convertir el sistema desarrollado en una incubadora neonatal real? **
+El prototipo ilustra el principio de operación (calefacción, control de temperatura y pesaje), pero está lejos de ser un dispositivo médico. Para convertirlo en una incubadora neonatal real harían falta varios cambios.
 
-Por lo tanto, las variaciones del volumen sanguíneo periférico observadas indirectamente mediante la señal PPG pueden utilizarse como una aproximación a cambios en el tono vascular autonómico, aunque no constituyen por sí solas una medición completa de la actividad del sistema nervioso autónomo [1], [3].  
+Primero, un control de temperatura más completo: una incubadora real combina el control de la temperatura del aire con el control servo por temperatura de la piel del neonato, medida con una sonda cutánea [3], [4]. El calefactor también debería ser un elemento resistivo con ventilador, ya que el bombillo del prototipo genera calor localizado e iluminación constante, lo que no es adecuado para un neonato. Además, se requiere control de humedad, que reduce las pérdidas de agua por la piel en prematuros, y la posibilidad de suministrar oxígeno suplementario [1], [4].
 
-**Pregunta 2. ¿Cómo se compara el SPI con otros índices comúnmente empleados en cirugía, como el índice nocicepción-analgesia (ANI) y el índice de perfusión?**
+Segundo, un sistema de alarmas y seguridad independiente, con alertas audibles y visuales para sobretemperatura, falla del sensor, falla del ventilador y corte de energía, junto con un termostato de seguridad que corte el calefactor ante una falla, pues la hipertermia es un riesgo grave [5]. Todo esto debe cumplir la norma de seguridad de equipos electromédicos IEC 60601-1 y la norma particular de incubadoras IEC 60601-2-19 [6], [7], además del registro sanitario ante el INVIMA en Colombia [8].
 
-El SPI combina información proveniente del intervalo entre latidos (HBI) y de la amplitud de la señal fotopletismográfica (PPGA). Una disminución del HBI, una disminución de la PPGA o la combinación de ambas producen un aumento del SPI, por lo que valores elevados se asocian con una mayor respuesta nociceptiva [2], [3].  
+Por último, se necesitan materiales de grado médico y fáciles de desinfectar, una cubierta de doble pared con filtración de aire y accesos seguros en lugar de una tapa de caja, una celda de carga calibrada con resolución de gramos, y una validación clínica del equipo.
 
-El Analgesia Nociception Index (ANI) utiliza principalmente información obtenida de la variabilidad de la frecuencia cardiaca para valorar cambios relacionados con la actividad parasimpática. El índice se ha propuesto para evaluar en tiempo real el balance entre antinocicepción y nocicepción durante anestesia general [5]. A diferencia del SPI, donde valores mayores indican generalmente una respuesta nociceptiva más elevada, en el ANI los valores más bajos se asocian con una menor actividad parasimpática y una mayor respuesta al estrés nociceptivo [5].  
-
-El índice de perfusión (PI) se obtiene a partir de la señal del oxímetro de pulso y representa cambios en la perfusión periférica. Su comportamiento está estrechamente relacionado con modificaciones del flujo sanguíneo periférico y puede utilizarse como indicador no invasivo de cambios en la perfusión [6].  
-
-En consecuencia, los tres índices estudian componentes fisiológicos diferentes: el SPI combina información cardiaca y vascular periférica, el ANI se basa principalmente en la variabilidad cardiaca asociada con la regulación parasimpática y el índice de perfusión refleja principalmente las modificaciones de la perfusión periférica [2], [5], [6]. Ninguno de estos parámetros debe interpretarse por sí solo como una medición directa del dolor subjetivo, ya que el dolor y la nocicepción corresponden a fenómenos distintos [4].  
-
+**Pregunta 3. ¿Qué semejanzas hay entre una incubadora neonatal y una servo-cuna? **
 ## Bibliografia
-[1] E. J. Argüello-Prada, "The mountaineer's method for peak detection in photoplethysmographic signals," Revista Facultad de Ingeniería, Universidad de Antioquia, no. 90, pp. 42–50, 2019. https://doi.org/10.17533/udea.redin.n90a06  
+[1] C. G. K. Tran et al., “Designing a low-cost multifunctional infant incubator,” J. Lab. Autom., vol. 19, no. 3, pp. 332–337, Jun. 2014. https://doi.org/10.1177/2211068214530391
 
-[2] Huiku, M., Uutela, K., van Gils, M., Korhonen, I., Kymäläinen, M., Meriläinen, P., Paloheimo, M., Rantanen, M., Takala, P., Viertiö-Oja, H., & Yli-Hankala, A. (2007). Assessment of surgical stress during general anaesthesia. British Journal of Anaesthesia, 98(4), 447–455.
-https://doi.org/10.1093/bja/aem004  
+[2] L. Restrepo-Pérez, N. Durango-Londoño, N. E. Gómez-Suárez, F. González-Ramírez y N. Rivera-Bonilla, “Prototipo de incubadora neonatal,” Revista Ingeniería Biomédica, vol. 1, no. 1, pp. 55–59, 2007.
 
-[3] Oh, S. K., Won, Y. J., & Lim, B. G. (2024). Surgical pleth index monitoring in perioperative pain management: Usefulness and limitations. Korean Journal of Anesthesiology, 77(1), 31–45.
-https://doi.org/10.4097/kja.23158  
+[3] M. van Leeuwen et al., European Standards of Care for Newborn Health: Temperature management in newborn infants, EFCNI, Nov. 2018. https://newborn-health-standards.org
 
-[4] Raja, S. N., Carr, D. B., Cohen, M., Finnerup, N. B., Flor, H., Gibson, S., Keefe, F. J., Mogil, J. S., Ringkamp, M., Sluka, K. A., Song, X. J., Stevens, B., Sullivan, M. D., Tutelman, P. R., Ushida, T., & Vader, K. (2020). The revised International Association for the Study of Pain definition of pain: Concepts, challenges, and compromises. Pain, 161(9), 1976–1982.
-https://doi.org/10.1097/j.pain.0000000000001939  
+[4] R. B. Knobel-Dail, “Role of effective thermoregulation in premature neonates,” Research and Reports in Neonatology, vol. 4, pp. 147–156, 2014. https://doi.org/10.2147/RRN.S52377
 
-[5] Jeanne, M., Clément, C., De Jonckheere, J., Logier, R., & Tavernier, B. (2012). Variations of the analgesia nociception index during general anaesthesia for laparoscopic abdominal surgery. Journal of Clinical Monitoring and Computing, 26(4), 289–294.
-https://doi.org/10.1007/s10877-012-9354-0  
+[5] R. E. Black et al., “Global, regional, and national causes of child mortality in 2008: a systematic analysis,” Lancet, vol. 375, pp. 1969–1987, Jun. 2010. https://doi.org/10.1016/S0140-6736(10)60549-1
 
-[6] Lima, A. P., Beelen, P., & Bakker, J. (2002). Use of a peripheral perfusion index derived from the pulse oximetry signal as a noninvasive indicator of perfusion. Critical Care Medicine, 30(6), 1210–1213.
-https://doi.org/10.1097/00003246-200206000-00006  
+[6] International Electrotechnical Commission, IEC 60601-2-19: Medical electrical equipment – Particular requirements for the basic safety and essential performance of infant incubators.
 
-[7] Wirch, J. L., Wolfe, L. A., Weissgerber, T. L., & Davies, G. A. L. (2006). Cold pressor test protocol to evaluate cardiac autonomic function. Applied Physiology, Nutrition, and Metabolism, 31(3), 235–243.
-https://doi.org/10.1139/h05-018  
+[7] International Electrotechnical Commission, IEC 60601-1: Medical electrical equipment – General requirements for basic safety and essential performance.
 
-[8] M. Huiku et al., “Assessment of surgical stress during general anaesthesia,” British Journal of Anaesthesia, vol. 98, no. 4, pp. 447–455, 2007, doi: 10.1093/bja/aem004.
+[8] Ministerio de la Protección Social de Colombia, Decreto 4725 de 2005, por el cual se reglamenta el régimen de registros sanitarios, permiso de comercialización y vigilancia sanitaria de los dispositivos médicos para uso humano.
