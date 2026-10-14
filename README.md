@@ -13,19 +13,19 @@ El modelo se construyó sobre una caja plástica transparente con tapa, que perm
 
 La práctica permitió aplicar conocimientos de instrumentación, electrónica y sistemas de control a un dispositivo biomédico real. También permitió reconocer las limitaciones de un prototipo frente a una incubadora comercial.
 
-Objetivo general
+### Objetivo general
 
-*Diseñar y construir un modelo a escala de una incubadora neonatal capaz de mantener la temperatura interna entre 36 °C y 37,5 °C mediante un sistema de calefacción con circulación de aire, y de estimar el peso del recién nacido, mostrando ambas variables al usuario.
+* Diseñar y construir un modelo a escala de una incubadora neonatal capaz de mantener la temperatura interna entre 36 °C y 37,5 °C mediante un sistema de calefacción con circulación de aire, y de estimar el peso del recién nacido, mostrando ambas variables al usuario.
 
-Objetivos específicos
-*Identificar las partes principales de una incubadora neonatal y la función que cumple cada una.
-*Construir una cabina a escala con dimensiones no menores a 44 cm × 20 cm × 22 cm, con cubierta transparente, aislante y con acceso para manipulación.
-*Implementar un sistema de calefacción con un bombillo y un ventilador, controlado en lazo cerrado a partir de un sensor de temperatura.
-*Implementar un panel de LEDs que indique si la temperatura está dentro, por encima o por debajo del rango establecido.
-*Integrar una celda de carga y una pantalla LCD para estimar y mostrar el peso del neonato.
-*Verificar el desempeño del sistema, evaluando la capacidad de mantener la temperatura en el rango y el error en la medición del peso con un patrón de masa conocida.
-*Calcular el costo total y parcial del prototipo y compararlo con soluciones comerciales.
-*Reconocer las limitaciones del prototipo frente a una incubadora neonatal real.
+### Objetivos específicos
+* Identificar las partes principales de una incubadora neonatal y la función que cumple cada una.
+* Construir una cabina a escala con dimensiones no menores a 44 cm × 20 cm × 22 cm, con cubierta transparente, aislante y con acceso para manipulación.
+* Implementar un sistema de calefacción con un bombillo y un ventilador, controlado en lazo cerrado a partir de un sensor de temperatura.
+* Implementar un panel de LEDs que indique si la temperatura está dentro, por encima o por debajo del rango establecido.
+* Integrar una celda de carga y una pantalla LCD para estimar y mostrar el peso del neonato.
+* Verificar el desempeño del sistema, evaluando la capacidad de mantener la temperatura en el rango y el error en la medición del peso con un patrón de masa conocida.
+* Calcular el costo total y parcial del prototipo y compararlo con soluciones comerciales.
+* Reconocer las limitaciones del prototipo frente a una incubadora neonatal real.
 
   
 ## Metodologia 
